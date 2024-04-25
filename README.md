@@ -18,3 +18,5 @@ A sınıfında resim slide gösterisi yapma imkanı vardır. Katılımcıların 
 B sınıfında internete yüklemiş olduğumuz bir videoyu link üzerinden oynatabiliyoruz. (Video bütün katılımcılar sınıfa giriş yaptıktan sonra aynı anda oynatılabilmektedir. Buffering veya video zaman takibi yok maalesef.)
 
 Sandalyelere oturma etkileşimi yapılmıştır.
+
+Uygulamanın internet versiyonu (WebGL) bu linkten ulaşılabilir: https://simmer.io/@sertacaga/sanal-sinif ve https://sertacaga.itch.io/sanal-verse
