@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Realtime;
 
-public class CharacterSelection : MonoBehaviour
+public class SunumEkrani : MonoBehaviour
 {
     private GameObject[] characterList;
     private int index;
@@ -16,14 +16,14 @@ public class CharacterSelection : MonoBehaviour
         // diziyi modeller ile doldurun
         for (int i = 0; i < transform.childCount; i++)
             characterList[i] = transform.GetChild(i).gameObject;
-        // onlarýn oluþturucusunu deðiþtiriyoruz
+        // onlarÃ½n oluÃ¾turucusunu deÃ°iÃ¾tiriyoruz
         foreach (GameObject go in characterList)
             go.SetActive(false);
-        // seçilen karaktere geçiyoruz
+        // seÃ§ilen karaktere geÃ§iyoruz
         if (characterList[index])
             characterList[index].SetActive(true);
 
-        /*buradan sonraki kodlar seçilen karakteri aktif edip diðerlerini deaktif etmek için yazýyoruz
+        /*buradan sonraki kodlar seÃ§ilen karakteri aktif edip diÃ°erlerini deaktif etmek iÃ§in yazÃ½yoruz
         */
     }
 
@@ -34,7 +34,7 @@ public class CharacterSelection : MonoBehaviour
             index--;//index -= 1; index = index - 1;
             if (index < 0)
                 index = characterList.Length - 1;
-            // yeni modeli aç
+            // yeni modeli aÃ§
             characterList[index].SetActive(true);
         }
         public void ToggleRight()
@@ -44,10 +44,10 @@ public class CharacterSelection : MonoBehaviour
             index++;//index -= 1; index = index - 1; 
             if (index == characterList.Length)
                 index = 0;
-            // yeni modeli aç
+            // yeni modeli aÃ§
             characterList[index].SetActive(true);
         }
-        //sahne deðiþtirme ekraný
+        //sahne deÃ°iÃ¾tirme ekranÃ½
         public void KarakteriSec()
         {
             PlayerPrefs.SetInt("CharacterSelected", index);
