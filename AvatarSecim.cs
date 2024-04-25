@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Photon.Realtime;
 
-public class AvatarMenu : MonoBehaviour
+public class AvatarSecim : MonoBehaviour
 {
     public GameObject avatarPrefab1;
     public GameObject avatarPrefab2;
@@ -13,7 +13,7 @@ public class AvatarMenu : MonoBehaviour
 
     public void SelectAvatar1()
     {
-        // Sahneyi deðiþtir
+        // Sahneyi deÃ°iÃ¾tir
         // SceneManager.LoadScene("PunBasics-Room for 1");
         // PhotonNetwork.LoadLevel("Oda");
         // Instantiate the avatar prefab
@@ -22,7 +22,7 @@ public class AvatarMenu : MonoBehaviour
 
     public void SelectAvatar2()
     {
-        // Sahneyi deðiþtir
+        // Sahneyi deÃ°iÃ¾tir
         // SceneManager.LoadScene("PunBasics-Room for 1");
         // PhotonNetwork.LoadLevel("Oda");
         // Instantiate the avatar prefab
@@ -30,7 +30,7 @@ public class AvatarMenu : MonoBehaviour
     }
         public void SelectAvatar3()
     {
-        // Sahneyi deðiþtir
+        // Sahneyi deÃ°iÃ¾tir
         // SceneManager.LoadScene("PunBasics-Room for 1");
         // PhotonNetwork.LoadLevel("Oda");
         // Instantiate the avatar prefab
@@ -38,7 +38,7 @@ public class AvatarMenu : MonoBehaviour
     }
         public void SelectAvatar4()
     {
-        // Sahneyi deðiþtir
+        // Sahneyi deÃ°iÃ¾tir
         // SceneManager.LoadScene("PunBasics-Room for 1");
         // PhotonNetwork.LoadLevel("Oda");
         // Instantiate the avatar prefab
