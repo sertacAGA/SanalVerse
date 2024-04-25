@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class VidPlayer2 : MonoBehaviourPunCallbacks, IPunObservable
+public class VideoOynatma : MonoBehaviourPunCallbacks, IPunObservable
 {
     [SerializeField] string videoFileName;
 
@@ -40,7 +40,7 @@ public class VidPlayer2 : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
 
-    // RPC iþlevimiz
+    // RPC iÃ¾levimiz
     [PunRPC]
     void SyncVideoState(bool state)
     {
@@ -61,7 +61,7 @@ public class VidPlayer2 : MonoBehaviourPunCallbacks, IPunObservable
         videoPlayer.Play();
     }
 
-    // PhotonView'ýn durumunu senkronize etmek için gerekli olan OnPhotonSerializeView iþlevi
+    // PhotonView'Ã½n durumunu senkronize etmek iÃ§in gerekli olan OnPhotonSerializeView iÃ¾levi
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
