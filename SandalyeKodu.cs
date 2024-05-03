@@ -2,7 +2,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class Chairsit3 : MonoBehaviourPun
+public class SandalyeKodu : MonoBehaviourPun
 {
     public GameObject intText, standText; // Mesaj metinleri
     public bool interactable, sitting;
