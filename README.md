@@ -1,3 +1,5 @@
+TÜRKÇE
+-----------------------------------------------------------------------
 Merhaba. Sanal Verse uygulaması ile Online çok oyunculu sınıf ve konferans buluşmalarınızı yapabilirsiniz.
 Uygulamamda yer alan özellikleri aşağıda belirttim:
 
@@ -20,3 +22,29 @@ B sınıfında internete yüklemiş olduğumuz bir videoyu link üzerinden oynat
 Sandalyelere oturma etkileşimi yapılmıştır.
 
 Uygulamanın internet versiyonu (WebGL) bu linkten ulaşılabilir: https://simmer.io/@sertacaga/sanal-sinif ve https://sertacaga.itch.io/sanal-verse
+
+
+ENGLISH
+----------------------------------------------------------------------
+Hello. You can have online multiplayer class and conference meetings with the Virtual Verse application.
+I have stated the features of my application below:
+
+There is a name entry field on the login screen. The name given here becomes active when you log in to the application.
+
+The server system has been prepared using the free Photon Engine 2 Multiplayer system. (It can be controlled from the panel.)
+
+Photon Voice free version was used for voice communication. (It can be controlled from the panel.)
+
+Photon Chat free version was used for chatting.
+
+Free participation is available for up to 20 people in 1 room.
+
+Character selection can be made when spawning into the scene. Characters are of two different types, Secondary education and Adult education.
+
+Class A has the opportunity to make a picture slide show. Forward and back buttons are coded to make slide transitions that participants can see at the same time.
+
+In Class B, we can play a video that we have uploaded to the internet via the link. (The video can be played at the same time after all participants log in to the class. Unfortunately, there is no buffering or video time tracking.)
+
+Sitting interaction was done on the chairs.
+
+The internet version of the application (WebGL) can be accessed at this link: https://simmer.io/@sertacaga/sanal-sinif and https://sertacaga.itch.io/sanal-verse
