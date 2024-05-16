@@ -15,7 +15,7 @@ C:/Uygulama/SanalVerse - WebGL
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-50683
+50268
 Successfully changed project path to: C:/Uygulama/SanalVerse - WebGL
 C:/Uygulama/SanalVerse - WebGL
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Uygulama/SanalVerse - WebGL
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 386.13 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 319.54 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.1.20f1 (01d83b40d570)
 [Subsystems] Discovering subsystems at path C:/Unity/2022.1.20f1/Editor/Data/Resources/UnitySubsystems
@@ -63,52 +63,52 @@ Initialize mono
 Mono path[0] = 'C:/Unity/2022.1.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Unity/2022.1.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Unity/2022.1.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56200
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56704
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Unity/2022.1.20f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Unity/2022.1.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Unity/2022.1.20f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.016657 seconds.
+Registered in 0.019295 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 253.18 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 253.96 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.674 seconds
+- Completed reload, in  1.878 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1675ms)
-		BeginReloadAssembly (167ms)
+	ReloadAssembly (1879ms)
+		BeginReloadAssembly (245ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (1228ms)
-			LoadAssemblies (157ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (1313ms)
+			LoadAssemblies (244ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (309ms)
-				TypeCache.Initialize (308ms)
-					TypeCache.ScanAssembly (306ms)
+			SetupTypeCache (284ms)
+				TypeCache.Initialize (283ms)
+					TypeCache.ScanAssembly (278ms)
 				ResolveRequiredComponents (1ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (86ms)
-			SetupLoadedEditorAssemblies (728ms)
+			RebuildScriptCaches (91ms)
+			SetupLoadedEditorAssemblies (804ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (24ms)
-				SetLoadedEditorAssemblies (25ms)
-				RefreshPlugins (253ms)
+				InitializePlatformSupportModulesInManaged (34ms)
+				SetLoadedEditorAssemblies (18ms)
+				RefreshPlugins (254ms)
 				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (321ms)
-				ProcessInitializeOnLoadMethodAttributes (101ms)
+				ProcessInitializeOnLoadAttributes (347ms)
+				ProcessInitializeOnLoadMethodAttributes (147ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.028905 seconds.
+Registered in 0.062458 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
@@ -117,7 +117,7 @@ Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 330.15 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 172.57 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Make Babies Senses has a sense that is attempting to sense an unkown object type of 
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -232,46 +232,46 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
 (Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  4.333 seconds
+- Completed reload, in  3.116 seconds
 Domain Reload Profiling:
-	ReloadAssembly (4336ms)
-		BeginReloadAssembly (221ms)
+	ReloadAssembly (3117ms)
+		BeginReloadAssembly (148ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (34ms)
-		EndReloadAssembly (3753ms)
-			LoadAssemblies (212ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (673ms)
-				TypeCache.Initialize (641ms)
-					TypeCache.ScanAssembly (633ms)
-				ResolveRequiredComponents (32ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (155ms)
-			SetupLoadedEditorAssemblies (2543ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (2764ms)
+			LoadAssemblies (367ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (539ms)
+				TypeCache.Initialize (517ms)
+					TypeCache.ScanAssembly (512ms)
+				ResolveRequiredComponents (23ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (128ms)
+			SetupLoadedEditorAssemblies (1576ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (42ms)
-				SetLoadedEditorAssemblies (10ms)
-				RefreshPlugins (330ms)
-				BeforeProcessingInitializeOnLoad (281ms)
-				ProcessInitializeOnLoadAttributes (855ms)
-				ProcessInitializeOnLoadMethodAttributes (1008ms)
-				AfterProcessingInitializeOnLoad (14ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (9ms)
+				RefreshPlugins (173ms)
+				BeforeProcessingInitializeOnLoad (147ms)
+				ProcessInitializeOnLoadAttributes (471ms)
+				ProcessInitializeOnLoadMethodAttributes (736ms)
+				AfterProcessingInitializeOnLoad (16ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (19ms)
+			AwakeInstancesAfterBackupRestoration (26ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 2.65 ms, found 5 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 1.65 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4939 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2285 unused Assets / (4.3 MB). Loaded Objects now: 5055.
+Unloading 4937 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2285 unused Assets / (4.6 MB). Loaded Objects now: 5053.
 Memory consumption went from 0.80 GB to 0.79 GB.
-Total: 21.850100 ms (FindLiveObjects: 0.905200 ms CreateObjectMapping: 1.093100 ms MarkObjects: 13.165200 ms  DeleteObjects: 6.684700 ms)
+Total: 9.063400 ms (FindLiveObjects: 0.539100 ms CreateObjectMapping: 0.286900 ms MarkObjects: 3.589400 ms  DeleteObjects: 4.646000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -286,1772 +286,12 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.027766 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 7.73 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  6.602 seconds
-Domain Reload Profiling:
-	ReloadAssembly (6608ms)
-		BeginReloadAssembly (561ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (27ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (132ms)
-		EndReloadAssembly (5626ms)
-			LoadAssemblies (473ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (983ms)
-				TypeCache.Initialize (925ms)
-					TypeCache.ScanAssembly (900ms)
-				ResolveRequiredComponents (58ms)
-			ReleaseScriptCaches (12ms)
-			RebuildScriptCaches (359ms)
-			SetupLoadedEditorAssemblies (3496ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (108ms)
-				SetLoadedEditorAssemblies (25ms)
-				RefreshPlugins (8ms)
-				BeforeProcessingInitializeOnLoad (422ms)
-				ProcessInitializeOnLoadAttributes (1365ms)
-				ProcessInitializeOnLoadMethodAttributes (1522ms)
-				AfterProcessingInitializeOnLoad (45ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (52ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 33.17 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4843 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5058.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 16.325800 ms (FindLiveObjects: 1.272100 ms CreateObjectMapping: 0.749100 ms MarkObjects: 10.699100 ms  DeleteObjects: 3.598300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.034984 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 6.02 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.880 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3881ms)
-		BeginReloadAssembly (390ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (21ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (116ms)
-		EndReloadAssembly (3220ms)
-			LoadAssemblies (277ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (696ms)
-				TypeCache.Initialize (651ms)
-					TypeCache.ScanAssembly (639ms)
-				ResolveRequiredComponents (45ms)
-			ReleaseScriptCaches (6ms)
-			RebuildScriptCaches (216ms)
-			SetupLoadedEditorAssemblies (1866ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (73ms)
-				SetLoadedEditorAssemblies (16ms)
-				RefreshPlugins (6ms)
-				BeforeProcessingInitializeOnLoad (229ms)
-				ProcessInitializeOnLoadAttributes (773ms)
-				ProcessInitializeOnLoadMethodAttributes (745ms)
-				AfterProcessingInitializeOnLoad (23ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (21ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 18.81 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4843 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5061.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 7.216500 ms (FindLiveObjects: 0.396300 ms CreateObjectMapping: 0.368500 ms MarkObjects: 5.995000 ms  DeleteObjects: 0.455400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.024453 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 4.30 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  4.228 seconds
-Domain Reload Profiling:
-	ReloadAssembly (4231ms)
-		BeginReloadAssembly (327ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (102ms)
-		EndReloadAssembly (3670ms)
-			LoadAssemblies (265ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (588ms)
-				TypeCache.Initialize (545ms)
-					TypeCache.ScanAssembly (531ms)
-				ResolveRequiredComponents (43ms)
-			ReleaseScriptCaches (6ms)
-			RebuildScriptCaches (188ms)
-			SetupLoadedEditorAssemblies (2419ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (54ms)
-				SetLoadedEditorAssemblies (9ms)
-				RefreshPlugins (5ms)
-				BeforeProcessingInitializeOnLoad (341ms)
-				ProcessInitializeOnLoadAttributes (889ms)
-				ProcessInitializeOnLoadMethodAttributes (1098ms)
-				AfterProcessingInitializeOnLoad (22ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (36ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 32.50 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4843 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5064.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 14.328600 ms (FindLiveObjects: 0.950900 ms CreateObjectMapping: 0.591100 ms MarkObjects: 12.058900 ms  DeleteObjects: 0.725000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.033338 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 5.78 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  5.115 seconds
-Domain Reload Profiling:
-	ReloadAssembly (5118ms)
-		BeginReloadAssembly (462ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (131ms)
-		EndReloadAssembly (4337ms)
-			LoadAssemblies (352ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (902ms)
-				TypeCache.Initialize (820ms)
-					TypeCache.ScanAssembly (799ms)
-				ResolveRequiredComponents (82ms)
-			ReleaseScriptCaches (10ms)
-			RebuildScriptCaches (345ms)
-			SetupLoadedEditorAssemblies (2520ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (84ms)
-				SetLoadedEditorAssemblies (24ms)
-				RefreshPlugins (6ms)
-				BeforeProcessingInitializeOnLoad (376ms)
-				ProcessInitializeOnLoadAttributes (939ms)
-				ProcessInitializeOnLoadMethodAttributes (1065ms)
-				AfterProcessingInitializeOnLoad (25ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (29ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 10.99 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4843 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5067.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 11.023300 ms (FindLiveObjects: 0.750000 ms CreateObjectMapping: 0.597400 ms MarkObjects: 8.947700 ms  DeleteObjects: 0.725800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.040817 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 3.04 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  6.202 seconds
-Domain Reload Profiling:
-	ReloadAssembly (6205ms)
-		BeginReloadAssembly (495ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (2ms)
-			CreateAndSetChildDomain (159ms)
-		EndReloadAssembly (5317ms)
-			LoadAssemblies (412ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1011ms)
-				TypeCache.Initialize (955ms)
-					TypeCache.ScanAssembly (933ms)
-				ResolveRequiredComponents (56ms)
-			ReleaseScriptCaches (9ms)
-			RebuildScriptCaches (346ms)
-			SetupLoadedEditorAssemblies (3205ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (105ms)
-				SetLoadedEditorAssemblies (23ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (334ms)
-				ProcessInitializeOnLoadAttributes (1240ms)
-				ProcessInitializeOnLoadMethodAttributes (1449ms)
-				AfterProcessingInitializeOnLoad (50ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (51ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 39.37 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4843 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5070.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 11.730200 ms (FindLiveObjects: 1.051500 ms CreateObjectMapping: 3.116800 ms MarkObjects: 6.926800 ms  DeleteObjects: 0.632300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.017248 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 3.56 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.894 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3896ms)
-		BeginReloadAssembly (345ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (101ms)
-		EndReloadAssembly (3277ms)
-			LoadAssemblies (287ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (707ms)
-				TypeCache.Initialize (668ms)
-					TypeCache.ScanAssembly (653ms)
-				ResolveRequiredComponents (39ms)
-			ReleaseScriptCaches (6ms)
-			RebuildScriptCaches (221ms)
-			SetupLoadedEditorAssemblies (1875ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (69ms)
-				SetLoadedEditorAssemblies (14ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (242ms)
-				ProcessInitializeOnLoadAttributes (750ms)
-				ProcessInitializeOnLoadMethodAttributes (772ms)
-				AfterProcessingInitializeOnLoad (24ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (24ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 18.13 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4843 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5073.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 12.914700 ms (FindLiveObjects: 0.875100 ms CreateObjectMapping: 0.737800 ms MarkObjects: 9.549200 ms  DeleteObjects: 1.749900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.107385 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 12.98 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in 10.488 seconds
-Domain Reload Profiling:
-	ReloadAssembly (10499ms)
-		BeginReloadAssembly (2672ms)
-			ExecutionOrderSort (1ms)
-			DisableScriptedObjects (224ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (1ms)
-			CreateAndSetChildDomain (1518ms)
-		EndReloadAssembly (7424ms)
-			LoadAssemblies (861ms)
-			RebuildTransferFunctionScriptingTraits (2ms)
-			SetupTypeCache (936ms)
-				TypeCache.Initialize (884ms)
-					TypeCache.ScanAssembly (865ms)
-				ResolveRequiredComponents (52ms)
-			ReleaseScriptCaches (20ms)
-			RebuildScriptCaches (258ms)
-			SetupLoadedEditorAssemblies (5418ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (80ms)
-				SetLoadedEditorAssemblies (35ms)
-				RefreshPlugins (14ms)
-				BeforeProcessingInitializeOnLoad (310ms)
-				ProcessInitializeOnLoadAttributes (3190ms)
-				ProcessInitializeOnLoadMethodAttributes (1737ms)
-				AfterProcessingInitializeOnLoad (51ms)
-				EditorAssembliesLoaded (2ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (60ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 121.39 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4843 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5076.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 22.203600 ms (FindLiveObjects: 0.619000 ms CreateObjectMapping: 0.554900 ms MarkObjects: 14.507300 ms  DeleteObjects: 6.513500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.030307 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.13 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.740 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3741ms)
-		BeginReloadAssembly (412ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (109ms)
-		EndReloadAssembly (3077ms)
-			LoadAssemblies (436ms)
-			RebuildTransferFunctionScriptingTraits (2ms)
-			SetupTypeCache (963ms)
-				TypeCache.Initialize (929ms)
-					TypeCache.ScanAssembly (915ms)
-				ResolveRequiredComponents (34ms)
-			ReleaseScriptCaches (5ms)
-			RebuildScriptCaches (174ms)
-			SetupLoadedEditorAssemblies (1496ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (51ms)
-				SetLoadedEditorAssemblies (9ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (174ms)
-				ProcessInitializeOnLoadAttributes (517ms)
-				ProcessInitializeOnLoadMethodAttributes (726ms)
-				AfterProcessingInitializeOnLoad (16ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (20ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 22.94 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4843 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5079.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 7.552200 ms (FindLiveObjects: 0.464500 ms CreateObjectMapping: 0.259800 ms MarkObjects: 5.924400 ms  DeleteObjects: 0.901900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.031021 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.45 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.633 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3635ms)
-		BeginReloadAssembly (371ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (79ms)
-		EndReloadAssembly (3001ms)
-			LoadAssemblies (398ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (633ms)
-				TypeCache.Initialize (596ms)
-					TypeCache.ScanAssembly (585ms)
-				ResolveRequiredComponents (37ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (174ms)
-			SetupLoadedEditorAssemblies (1743ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (58ms)
-				SetLoadedEditorAssemblies (15ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (207ms)
-				ProcessInitializeOnLoadAttributes (682ms)
-				ProcessInitializeOnLoadMethodAttributes (763ms)
-				AfterProcessingInitializeOnLoad (14ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (18ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 13.95 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4843 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5082.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 7.392600 ms (FindLiveObjects: 0.538000 ms CreateObjectMapping: 0.487900 ms MarkObjects: 5.737400 ms  DeleteObjects: 0.627100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.029363 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 4.83 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.909 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3911ms)
-		BeginReloadAssembly (349ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (89ms)
-		EndReloadAssembly (3337ms)
-			LoadAssemblies (371ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (774ms)
-				TypeCache.Initialize (724ms)
-					TypeCache.ScanAssembly (704ms)
-				ResolveRequiredComponents (50ms)
-			ReleaseScriptCaches (9ms)
-			RebuildScriptCaches (196ms)
-			SetupLoadedEditorAssemblies (1760ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (62ms)
-				SetLoadedEditorAssemblies (12ms)
-				RefreshPlugins (5ms)
-				BeforeProcessingInitializeOnLoad (201ms)
-				ProcessInitializeOnLoadAttributes (594ms)
-				ProcessInitializeOnLoadMethodAttributes (865ms)
-				AfterProcessingInitializeOnLoad (19ms)
-				EditorAssembliesLoaded (2ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (25ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 27.38 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4841 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5085.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 14.809700 ms (FindLiveObjects: 1.291100 ms CreateObjectMapping: 1.502400 ms MarkObjects: 11.132200 ms  DeleteObjects: 0.881500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 64.31 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 58.02 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 80 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (468.6 KB). Loaded Objects now: 5085.
-Memory consumption went from 141.4 MB to 140.9 MB.
-Total: 7.699400 ms (FindLiveObjects: 0.776000 ms CreateObjectMapping: 0.649700 ms MarkObjects: 5.563200 ms  DeleteObjects: 0.707600 ms)
+Unloading 80 unused Assets / (476.1 KB). Loaded Objects now: 5053.
+Memory consumption went from 145.2 MB to 144.7 MB.
+Total: 10.601100 ms (FindLiveObjects: 0.471100 ms CreateObjectMapping: 0.424800 ms MarkObjects: 9.229700 ms  DeleteObjects: 0.473400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -2065,189 +305,185 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.033927 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 12.12 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Make Babies Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Neo Person Senses has a sense that is attempting to sense an unkown object type of 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-WizardsCode.Character.AI.AbstractSense:OnValidate () (at Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs:120)
-UnityEngine.ResourcesAPI:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll (string,System.Type)
-UnityEngine.Resources:LoadAll<Photon.Utilities.SettingsScriptableObjectBase> (string)
-Photon.Utilities.SettingsScriptableObjectBase:RegisterAllSettingsSOs () (at Assets/Photon/PhotonUtilities/SettingsScriptableObject/SettingsScriptableObject.cs:29)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: Assets/Character-Unity-Package-main/Character/Scripts/Runtime/Stats/AbstractSense.cs Line: 120)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  8.906 seconds
-Domain Reload Profiling:
-	ReloadAssembly (8913ms)
-		BeginReloadAssembly (1290ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (81ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (1ms)
-			CreateAndSetChildDomain (536ms)
-		EndReloadAssembly (6978ms)
-			LoadAssemblies (681ms)
-			RebuildTransferFunctionScriptingTraits (2ms)
-			SetupTypeCache (1427ms)
-				TypeCache.Initialize (1355ms)
-					TypeCache.ScanAssembly (1319ms)
-				ResolveRequiredComponents (73ms)
-			ReleaseScriptCaches (20ms)
-			RebuildScriptCaches (477ms)
-			SetupLoadedEditorAssemblies (4130ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (172ms)
-				SetLoadedEditorAssemblies (36ms)
-				RefreshPlugins (12ms)
-				BeforeProcessingInitializeOnLoad (473ms)
-				ProcessInitializeOnLoadAttributes (1606ms)
-				ProcessInitializeOnLoadMethodAttributes (1786ms)
-				AfterProcessingInitializeOnLoad (44ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (46ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 13.24 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4841 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (0.6 MB). Loaded Objects now: 5088.
-Memory consumption went from 0.77 GB to 0.77 GB.
-Total: 6.684100 ms (FindLiveObjects: 0.337400 ms CreateObjectMapping: 0.196000 ms MarkObjects: 5.525900 ms  DeleteObjects: 0.623200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 2463.777761 seconds.
+  path: Assets/Photon/PhotonChat/Demos/DemoChat/Files/OutlinedSquaredBox.png
+  artifactKey: Guid(ea7134547a5488b41a6bb5243b4ec2f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonChat/Demos/DemoChat/Files/OutlinedSquaredBox.png using Guid(ea7134547a5488b41a6bb5243b4ec2f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f5045e509ffc16b886696c4bf64376') in 0.454878 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000094 seconds.
+  path: Assets/Photon/PhotonChat/Demos/DemoChat/Files/PunIcon-White-129.png
+  artifactKey: Guid(37b0a18b391c6ae468b5bcc74bba2c1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonChat/Demos/DemoChat/Files/PunIcon-White-129.png using Guid(37b0a18b391c6ae468b5bcc74bba2c1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbff216c2c806ba52b8c21fdd984a85d') in 0.049943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Placard - Sign - 1faa7.png
+  artifactKey: Guid(9b8b115a8398f634cb87bbff6d8227f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Placard - Sign - 1faa7.png using Guid(9b8b115a8398f634cb87bbff6d8227f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe77ec896f02479704d4b25e246299b6') in 0.039439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/step3@2x.png
+  artifactKey: Guid(36e6970b84831434a9eac79abd03700b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/step3@2x.png using Guid(36e6970b84831434a9eac79abd03700b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dac38dc0f7ed0b122ea90cd0a59333a7') in 0.042672 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Work - Downcast face with sweat - 1f613.png
+  artifactKey: Guid(0c1b9a5e20ebb5d448c03bc6f1079e68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Work - Downcast face with sweat - 1f613.png using Guid(0c1b9a5e20ebb5d448c03bc6f1079e68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5de2246a6ede3d8af1442d5c4a29a379') in 0.037817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Rest - Meditation - 1f9d8-1f3fd.png
+  artifactKey: Guid(c45a45f6b59b95c458c5fe93b9afaa80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Rest - Meditation - 1f9d8-1f3fd.png using Guid(c45a45f6b59b95c458c5fe93b9afaa80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '415ee6c9d7479fe064978bd933415d23') in 0.043313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/step2@2x.png
+  artifactKey: Guid(0029170d14ce6c04c9f45c22cdae5559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/step2@2x.png using Guid(0029170d14ce6c04c9f45c22cdae5559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37bcb77869fe701326599d075e7aded8') in 0.048412 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/stepok.png
+  artifactKey: Guid(d4780dc1205c7c7478c970d8c61d24e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/stepok.png using Guid(d4780dc1205c7c7478c970d8c61d24e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c87dd8b237260a529bb286e52f199f16') in 0.039265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/OutlinedSquaredBox.png
+  artifactKey: Guid(c222cd02c447941edb09ecb6433229ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/OutlinedSquaredBox.png using Guid(c222cd02c447941edb09ecb6433229ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df00f5605a9d23971833f86b50bce5bc') in 0.031093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/refresh@2x.png
+  artifactKey: Guid(59571f82a0dc1a14da606dc0df6f8ea7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/refresh@2x.png using Guid(59571f82a0dc1a14da606dc0df6f8ea7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c8340c756b51ed222b0a3242a5e99e') in 0.043713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Wandering - Person Walking Dark Skin Tone - 1f6b6-1f3ff.png
+  artifactKey: Guid(642d5e7e871cc2143844a2b940684bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Wandering - Person Walking Dark Skin Tone - 1f6b6-1f3ff.png using Guid(642d5e7e871cc2143844a2b940684bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '929b0029b3f59a1ae965fd5b6915c25a') in 0.032840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/step1.png
+  artifactKey: Guid(9ce84ff0fdeb13d4a83f077d075dd9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/step1.png using Guid(9ce84ff0fdeb13d4a83f077d075dd9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5864974fedf03be0c49b01c3579b9158') in 0.037566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Question Mark - White.png
+  artifactKey: Guid(002497ad538a3e64a98d396f8ba2abbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Question Mark - White.png using Guid(002497ad538a3e64a98d396f8ba2abbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7003da1f1d94c20c57d2fa623865be6') in 0.039873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/refresh.png
+  artifactKey: Guid(6f6a4c6bd7cdc654d9d91f7de72afcb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/refresh.png using Guid(6f6a4c6bd7cdc654d9d91f7de72afcb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d9ed08817b2b901feb69ebd3acd4be6') in 0.042484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/xlink.png
+  artifactKey: Guid(556a2f3b046024d4c9621c1b4be5f0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/xlink.png using Guid(556a2f3b046024d4c9621c1b4be5f0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '427f5339c39949213b7eadc66b8ffb56') in 0.038617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Sell - Money Bag - 1f4b0.png
+  artifactKey: Guid(5dd9d2a9f05968f4aa950ec4951ddcd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character-Unity-Package-main/Character/Sprites/twemoji/Sell - Money Bag - 1f4b0.png using Guid(5dd9d2a9f05968f4aa950ec4951ddcd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2d4075474136974f96505faea01e9d8') in 0.047666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.246230 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/ignoredoverlay@2x.png
+  artifactKey: Guid(999d04c0ea94ccc41b3d80788160695b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/ignoredoverlay@2x.png using Guid(999d04c0ea94ccc41b3d80788160695b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '626dd649718401c7bef43a33c3173de6') in 0.035221 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/loading@2x.png
+  artifactKey: Guid(5dbc069eb79bd4d43840847264d6d956) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/loading@2x.png using Guid(5dbc069eb79bd4d43840847264d6d956) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98943880e6bb3b947ad81f3920e05c84') in 0.044120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/notondisk.png
+  artifactKey: Guid(b205f4b28f59dda49af458b35d8a3ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/notondisk.png using Guid(b205f4b28f59dda49af458b35d8a3ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53c1b10df61a789f694c168b8ade81b5') in 0.033823 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Character-Unity-Package-main/Character/Sprites/twemoji/News - Newspaper - 1f4f0.png
+  artifactKey: Guid(0dd2dbf7b445af34b8de10a57a277a25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character-Unity-Package-main/Character/Sprites/twemoji/News - Newspaper - 1f4f0.png using Guid(0dd2dbf7b445af34b8de10a57a277a25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c032301a3402294dee2cde07f714c26') in 0.040040 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 35.446706 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/UnitTextureGreen12x.mat
+  artifactKey: Guid(8c13ddd2bc8fa4e85943376cf7c8bf7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/UnitTextureGreen12x.mat using Guid(8c13ddd2bc8fa4e85943376cf7c8bf7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce6c690f318bc2e11c81de71b4d42bf5') in 0.176153 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/UnitTextureRed12x.mat
+  artifactKey: Guid(3f171282ef46c4fbea54d9ab581fcb83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Materials/UnitTextureRed12x.mat using Guid(3f171282ef46c4fbea54d9ab581fcb83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d9aa25e77877fd66c1f863a58ac616') in 0.030172 seconds 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 43.06 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 67.41 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 80 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 80 unused Assets / (476.8 KB). Loaded Objects now: 5088.
-Memory consumption went from 141.4 MB to 140.9 MB.
-Total: 11.406100 ms (FindLiveObjects: 0.683700 ms CreateObjectMapping: 0.572700 ms MarkObjects: 9.188300 ms  DeleteObjects: 0.958000 ms)
+Unloading 80 unused Assets / (476.3 KB). Loaded Objects now: 5109.
+Memory consumption went from 144.7 MB to 144.3 MB.
+Total: 36.340400 ms (FindLiveObjects: 0.478600 ms CreateObjectMapping: 0.214300 ms MarkObjects: 34.627200 ms  DeleteObjects: 1.018000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 71.20 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 80 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 80 unused Assets / (484.9 KB). Loaded Objects now: 5109.
+Memory consumption went from 144.8 MB to 144.3 MB.
+Total: 11.156900 ms (FindLiveObjects: 0.419800 ms CreateObjectMapping: 0.310300 ms MarkObjects: 9.863900 ms  DeleteObjects: 0.560700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 53.75 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 80 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 80 unused Assets / (468.4 KB). Loaded Objects now: 5109.
+Memory consumption went from 144.7 MB to 144.3 MB.
+Total: 13.289200 ms (FindLiveObjects: 0.536400 ms CreateObjectMapping: 0.324600 ms MarkObjects: 11.888400 ms  DeleteObjects: 0.537400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
