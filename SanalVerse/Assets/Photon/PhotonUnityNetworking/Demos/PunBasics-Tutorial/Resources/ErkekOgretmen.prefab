@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 11413802}
   - component: {fileID: -3922024452559267169}
   - component: {fileID: 5529794841744801245}
-  - component: {fileID: -759247590416784434}
+  - component: {fileID: -2720585999874510191}
   m_Layer: 0
   m_Name: ErkekOgretmen
   m_TagString: Player
@@ -200,18 +200,18 @@ MonoBehaviour:
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
   m_SynchronizeParameters:
-  - Type: 4
-    SynchronizeType: 1
-    Name: Jump
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Speed
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Direction
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Hi
+  - Type: 9
+    SynchronizeType: 0
+    Name: Run
   - Type: 9
     SynchronizeType: 0
     Name: IsSitting
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a110f4882e6160f4d8fd8e80cebb7966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-759247590416784434
+--- !u!114 &-2720585999874510191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 100
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2803777170890306758
 MonoBehaviour:
   m_ObjectHideFlags: 0

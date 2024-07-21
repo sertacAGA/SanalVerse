@@ -90,7 +90,7 @@ namespace Photon.Pun.Demo.Asteroids
 
         public void SetPlayerReady(bool playerReady)
         {
-            PlayerReadyButton.GetComponentInChildren<Text>().text = playerReady ? "Ready!" : "Ready?";
+            PlayerReadyButton.GetComponentInChildren<Text>().text = playerReady ? "Hazır!" : "Hazır?";
             PlayerReadyImage.enabled = playerReady;
         }
     }

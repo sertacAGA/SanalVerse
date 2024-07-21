@@ -1,26 +1,17 @@
 using UnityEngine;
 using Photon.Pun;
 
-public class OturmaKontrolcusu : MonoBehaviourPunCallbacks
+public class OturmaKontrolcusu2 : MonoBehaviourPunCallbacks
 {
     private Animator anim;
     private bool isSitting = false;
-    private bool isWalking = false;
-    private RaycastHit hitInfo;
+    private RaycastHit hitInfo; // Tıklanan nesneyi saklamak için
 
-    // Kamera hareket bileşeni referansı
-    private KameraHareket kameraHareket;
+    public GameObject cameraInsideCharacter; // Karakterin içindeki kamera objesi
 
     private void Start()
     {
         anim = GetComponent<Animator>();
-        kameraHareket = GetComponent<KameraHareket>();
-
-        // Başlangıçta kamera hareket bileşenini devre dışı bırakın
-        if (kameraHareket != null)
-        {
-            kameraHareket.enabled = false;
-        }
     }
 
     private void Update()
@@ -40,14 +31,14 @@ public class OturmaKontrolcusu : MonoBehaviourPunCallbacks
                     newDirection.y = 0f;
                     transform.forward = newDirection;
 
-                    // Kamera hareket bileşenini devre dışı bırakın
-                    if (kameraHareket != null)
-                    {
-                        kameraHareket.enabled = false;
-                    }
-
                     // Oturma işlemi diğer oyunculara iletilmeli
                     photonView.RPC("SetIsWalkingRPC", RpcTarget.All, true);
+
+                    // Karakterin içindeki kamerayı deaktif et
+                    if (cameraInsideCharacter != null)
+                    {
+                        cameraInsideCharacter.SetActive(false);
+                    }
                 }
             }
             else
@@ -70,14 +61,14 @@ public class OturmaKontrolcusu : MonoBehaviourPunCallbacks
                             newDirection.y = 0f;
                             transform.forward = newDirection;
 
-                            // Kamera hareket bileşenini aktif hale getirin
-                            if (kameraHareket != null)
-                            {
-                                kameraHareket.enabled = true;
-                            }
-
                             // Oturma işlemi diğer oyunculara iletilmeli
                             photonView.RPC("SetIsSittingRPC", RpcTarget.All, true);
+
+                            // Karakterin içindeki kamerayı aktif et
+                            if (cameraInsideCharacter != null)
+                            {
+                                cameraInsideCharacter.SetActive(true);
+                            }
                         }
                     }
                 }
@@ -90,18 +81,11 @@ public class OturmaKontrolcusu : MonoBehaviourPunCallbacks
     {
         isSitting = value;
         anim.SetBool("IsSitting", value);
-
-        // Kamera hareket bileşeninin durumunu güncelle
-        if (kameraHareket != null)
-        {
-            kameraHareket.enabled = value;
-        }
     }
 
     [PunRPC]
     private void SetIsWalkingRPC(bool value)
     {
-        isWalking = value;
         anim.SetBool("IsWalking", value);
     }
 }

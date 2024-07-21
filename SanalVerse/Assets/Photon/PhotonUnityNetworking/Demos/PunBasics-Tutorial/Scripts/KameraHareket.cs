@@ -3,15 +3,15 @@ using Photon.Pun;
 
 public class KameraHareket : MonoBehaviourPunCallbacks
 {
-    public float sensitivity = 2f; // Dönme hassasiyeti
+    public float sensitivity = 2f; // Dï¿½nme hassasiyeti
 
-    private bool isControllingCamera = false; // Sadece kendi oyuncusunun kamerasýný kontrol ettiðini belirten deðiþken
+    private bool isControllingCamera = false; // Sadece kendi oyuncusunun kamerasï¿½nï¿½ kontrol ettiï¿½ini belirten deï¿½iï¿½ken
 
     void Start()
     {
         if (photonView.IsMine)
         {
-            isControllingCamera = true; // Sadece kendi oyuncusunun kamerasýný kontrol edeceðiz
+            isControllingCamera = true; // Sadece kendi oyuncusunun kamerasï¿½nï¿½ kontrol edeceï¿½iz
         }
     }
 
@@ -19,13 +19,13 @@ public class KameraHareket : MonoBehaviourPunCallbacks
     {
         if (!isControllingCamera)
         {
-            return; // Diðer oyuncularýn kameralarýný kontrol etmiyoruz
+            return; // Diï¿½er oyuncularï¿½n kameralarï¿½nï¿½ kontrol etmiyoruz
         }
 
         float mouseX = Input.GetAxis("Mouse X"); // Fare yatay hareketi
         float mouseY = Input.GetAxis("Mouse Y"); // Fare dikey hareketi
 
-        transform.Rotate(Vector3.up * mouseX * sensitivity, Space.World); // Yatay dönme
-        transform.Rotate(Vector3.right * -mouseY * sensitivity); // Dikey dönme
+        transform.Rotate(Vector3.up * mouseX * sensitivity, Space.World); // Yatay dï¿½nme
+        transform.Rotate(Vector3.right * -mouseY * sensitivity); // Dikey dï¿½nme
     }
 }
