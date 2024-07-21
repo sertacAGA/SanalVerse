@@ -21,7 +21,7 @@ B sınıfında internete yüklemiş olduğumuz bir videoyu link üzerinden oynat
 
 Sandalyelere oturma etkileşimi yapılmıştır.
 
-Uygulamanın internet versiyonu (WebGL) bu linkten ulaşılabilir: https://simmer.io/@sertacaga/sanal-sinif ve https://sertacaga.itch.io/sanal-verse
+Uygulamanın internet versiyonu (WebGL) bu linkten ulaşılabilir: https://simmer.io/@sertacaga/sanalverse ve https://sertacaga.itch.io/sanalverse
 
 
 ENGLISH
@@ -47,4 +47,4 @@ In Class B, we can play a video that we have uploaded to the internet via the li
 
 Sitting interaction was done on the chairs.
 
-The internet version of the application (WebGL) can be accessed at this link: https://simmer.io/@sertacaga/sanal-sinif and https://sertacaga.itch.io/sanal-verse
+The internet version of the application (WebGL) can be accessed at this link: https://simmer.io/@sertacaga/sanalverse and https://sertacaga.itch.io/sanalverse
