@@ -14,7 +14,7 @@ public class AvatarMenu2 : MonoBehaviour
     public void SelectAvatar1()
     {
         // Sahneyi deðiþtir
-        // SceneManager.LoadScene("PunBasics-Room for 1");
+        // SceneManager.LoadScene("Oyun");
         // PhotonNetwork.LoadLevel("Oyun");
         // Instantiate the avatar prefab
         PhotonNetwork.Instantiate(avatarPrefab1.name, Vector3.zero, Quaternion.identity);

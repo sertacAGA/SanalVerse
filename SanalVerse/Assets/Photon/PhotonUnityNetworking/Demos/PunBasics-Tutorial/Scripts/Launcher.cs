@@ -216,7 +216,7 @@ namespace Photon.Pun.Demo.PunBasics
 
 				// #Critical
 				// Load the Room Level. 
-				PhotonNetwork.LoadLevel("Oyun");
+				PhotonNetwork.LoadLevel("Karakter");
 			}
 		}
 
