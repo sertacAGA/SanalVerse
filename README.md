@@ -1,3 +1,4 @@
+![alt text](https://github.com/chatress/SanalVerse-Multiplayer-School-Simulator/blob/main/Ekran-1.png?raw=true)
 TÜRKÇE
 -----------------------------------------------------------------------
 Merhaba. Sanal Verse uygulaması ile Online çok oyunculu sınıf ve konferans buluşmalarınızı yapabilirsiniz.
