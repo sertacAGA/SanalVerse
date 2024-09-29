@@ -1,27 +1,35 @@
 using UnityEngine;
-using Photon.Pun;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class KarakterDurum : MonoBehaviour
 {
     public Toggle studentToggle;
     public Toggle teacherToggle;
 
-    private bool isStudent = true;
-
     void Start()
     {
-        // Ýlk olarak öðrenci seçili olarak baþlayýn
-        studentToggle.isOn = true;
-        teacherToggle.isOn = false;
+        // Önce kaydedilmiþ bir seçim var mý kontrol edin
+        if (PlayerPrefs.HasKey("IsStudent"))
+        {
+            // Kaydedilmiþ deðeri yükleyin
+            bool isStudent = PlayerPrefs.GetInt("IsStudent") == 1;
+            studentToggle.isOn = isStudent;
+            teacherToggle.isOn = !isStudent;
+        }
+        else
+        {
+            // Varsayýlan olarak öðrenci seçili olsun
+            studentToggle.isOn = true;
+            teacherToggle.isOn = false;
+            PlayerPrefs.SetInt("IsStudent", 1);
+        }
     }
 
     public void OnStudentToggle(bool isOn)
     {
         if (isOn)
         {
-            isStudent = true;
+            PlayerPrefs.SetInt("IsStudent", 1); // Öðrenci olarak ayarlayýn
             teacherToggle.isOn = false;
         }
     }
@@ -30,14 +38,8 @@ public class KarakterDurum : MonoBehaviour
     {
         if (isOn)
         {
-            isStudent = false;
+            PlayerPrefs.SetInt("IsStudent", 0); // Öðretmen olarak ayarlayýn
             studentToggle.isOn = false;
         }
-    }
-
-    // Seçilen karakterin kimliðini döndürmek için bu iþlevi kullanabilirsiniz
-    public int GetSelectedCharacter()
-    {
-        return isStudent ? 0 : 1;
     }
 }

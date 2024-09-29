@@ -1,81 +1,78 @@
-// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="PlayerAnimatorManager.cs" company="Exit Games GmbH">
-//   Part of: Photon Unity Networking Demos
-// </copyright>
-// <summary>
-//  Used in PUN Basics Tutorial to deal with the networked player Animator Component controls.
-// </summary>
-// <author>developer@exitgames.com</author>
-// --------------------------------------------------------------------------------------------------------------------
-
 using UnityEngine;
 
 namespace Photon.Pun.Demo.PunBasics
 {
-	public class PlayerAnimatorManager : MonoBehaviourPun 
-	{
+    public class PlayerAnimatorManager : MonoBehaviourPun
+    {
         #region Private Fields
 
         [SerializeField]
-	    private float directionDampTime = 0.25f;
-        Animator animator;
+        private float directionDampTime = 0.25f;
+        [SerializeField]
+        private float moveSpeed = 2.0f;  // Hareket hýzý
+        [SerializeField]
+        private float rotationSpeed = 200.0f;  // Dönüþ hýzý
+        private Animator animator;
+        private CharacterController characterController;
 
-		#endregion
+        #endregion
 
-		#region MonoBehaviour CallBacks
+        #region MonoBehaviour CallBacks
 
-		/// <summary>
-		/// MonoBehaviour method called on GameObject by Unity during initialization phase.
-		/// </summary>
-	    void Start () 
-	    {
-	        animator = GetComponent<Animator>();
-	    }
-	        
-		/// <summary>
-		/// MonoBehaviour method called on GameObject by Unity on every frame.
-		/// </summary>
-	    void Update () 
-	    {
+        void Start()
+        {
+            animator = GetComponent<Animator>();
+            characterController = GetComponent<CharacterController>();
+        }
 
-			// Prevent control is connected to Photon and represent the localPlayer
-	        if( photonView.IsMine == false && PhotonNetwork.IsConnected == true )
-	        {
-	            return;
-	        }
+        void Update()
+        {
 
-			// failSafe is missing Animator component on GameObject
-	        if (!animator)
-	        {
-				return;
-			}
-
-			// deal with Jumping
-            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);			
-
-			// only allow jumping if we are running.
-            if (stateInfo.IsName("Base Layer.Run"))
+            if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
             {
-				// When using trigger parameter
-                if (Input.GetButtonDown("Fire2")) animator.SetTrigger("Jump"); 
-			}
-           
-			// deal with movement
+                return;
+            }
+
+            if (!animator)
+            {
+                return;
+            }
+
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
 
-			// prevent negative Speed.
-            if( v < 0 )
+            // Yön parametresini hesapla (blend tree için)
+            float direction = 0;
+
+            if (v > 0)  // Ýleri hareket
             {
-                v = 0;
+                direction = 0;
+            }
+            else if (v < 0)  // Geri hareket
+            {
+                direction = -2;
+            }
+            else if (h > 0)  // Sað hareket
+            {
+                direction = 1;
+            }
+            else if (h < 0)  // Sol hareket
+            {
+                direction = -1;
             }
 
-			// set the Animator Parameters
-            animator.SetFloat( "Speed", h*h+v*v );
-            animator.SetFloat( "Direction", h );
-	    }
+            // Animasyon parametrelerini ayarla
+            animator.SetFloat("Speed", Mathf.Abs(h) + Mathf.Abs(v)); // Mutlak deðerler üzerinden hesapla
+            animator.SetFloat("Direction", direction, directionDampTime, Time.deltaTime);
 
-		#endregion
+            // Karakterin ileri ve geri hareketini düzenliyoruz
+            Vector3 moveDir = transform.forward * v * moveSpeed * Time.deltaTime;
+            characterController.Move(moveDir);
 
-	}
+            // Karakterin saða sola dönmesini düzenliyoruz
+            transform.Rotate(0, h * rotationSpeed * Time.deltaTime, 0);
+        }
+
+        #endregion
+    }
 }

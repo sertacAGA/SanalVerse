@@ -51,6 +51,6 @@ public class CharacterSelection : MonoBehaviour
         public void KarakteriSec()
         {
             PlayerPrefs.SetInt("CharacterSelected", index);
-            SceneManager.LoadScene("PunBasics-Room for 1");
+            // SceneManager.LoadScene("Oyun");
         }
     }
