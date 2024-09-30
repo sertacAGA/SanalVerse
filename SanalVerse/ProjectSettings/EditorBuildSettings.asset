@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 6529114476a1d434a91716325d17a492
   - enabled: 1
-    path: Assets/Scenes/SinifDeneme.unity
-    guid: c99b3c883a0a5fa43969d08ee289cbda
+    path: Assets/Scenes/Karakter.unity
+    guid: cb42577fe570be0458288ba7d2691575
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2d1a8aea1356660489973a1e57cd42e8,
       type: 2}
