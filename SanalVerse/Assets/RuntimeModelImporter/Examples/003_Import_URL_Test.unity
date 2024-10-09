@@ -230,6 +230,176 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c40d4a6f6f5aa45a056cfbe4301b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &302692765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302692769}
+  - component: {fileID: 302692768}
+  - component: {fileID: 302692767}
+  - component: {fileID: 302692766}
+  - component: {fileID: 302692770}
+  m_Layer: 0
+  m_Name: Deneme
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &302692766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302692765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ad2e3a9b1ab434ab6c6fd1ae74cda6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressText: {fileID: 1792164798}
+  progressSlider: {fileID: 507591661}
+  progressImage: {fileID: 515019966}
+--- !u!114 &302692767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302692765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e9158d5b6a7444caae51de74429f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsList:
+  - name: At
+    path: https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/At/At_Modeli_Kaplamali.obj
+    skip: 0
+    loaderOptions:
+      zUp: 0
+      litDiffuse: 0
+      convertToDoubleSided: 0
+      modelScaling: 0
+      reuseLoaded: 0
+      inheritLayer: 0
+      buildColliders: 0
+      colliderConvex: 0
+      colliderTrigger: 0
+      use32bitIndices: 0
+      hideWhileLoading: 0
+      splitByMaterial: 0
+      localPosition: {x: 0, y: 0, z: 0}
+      localEulerAngles: {x: 0, y: 0, z: 0}
+      localScale: {x: 0, y: 0, z: 0}
+  - name: Pokemon
+    path: https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/Pokemon/Pokemon.obj
+    skip: 0
+    loaderOptions:
+      zUp: 0
+      litDiffuse: 0
+      convertToDoubleSided: 0
+      modelScaling: 0
+      reuseLoaded: 0
+      inheritLayer: 0
+      buildColliders: 0
+      colliderConvex: 0
+      colliderTrigger: 0
+      use32bitIndices: 0
+      hideWhileLoading: 0
+      splitByMaterial: 0
+      localPosition: {x: 0, y: 0, z: 0}
+      localEulerAngles: {x: 0, y: 0, z: 0}
+      localScale: {x: 0, y: 0, z: 0}
+  - name: Ayi
+    path: https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/Ayi.obj
+    skip: 0
+    loaderOptions:
+      zUp: 0
+      litDiffuse: 0
+      convertToDoubleSided: 0
+      modelScaling: 0
+      reuseLoaded: 0
+      inheritLayer: 0
+      buildColliders: 0
+      colliderConvex: 0
+      colliderTrigger: 0
+      use32bitIndices: 0
+      hideWhileLoading: 0
+      splitByMaterial: 0
+      localPosition: {x: 0, y: 0, z: 0}
+      localEulerAngles: {x: 0, y: 0, z: 0}
+      localScale: {x: 0, y: 0, z: 0}
+  defaultImportOptions:
+    zUp: 1
+    litDiffuse: 0
+    convertToDoubleSided: 0
+    modelScaling: 1
+    reuseLoaded: 1
+    inheritLayer: 0
+    buildColliders: 0
+    colliderConvex: 0
+    colliderTrigger: 0
+    use32bitIndices: 1
+    hideWhileLoading: 0
+    splitByMaterial: 0
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngles: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
+  pathSettings: {fileID: 302692768}
+  textureUrls:
+  - https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/At/At_Modeli_Kaplamali.obj
+  - https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/Pokemon/Pokemon.obj
+  - https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/Ayi.obj
+--- !u!114 &302692768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302692765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e579ad933bbf124a947f0795cef45f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorRootPath: 0
+  defaultRootPath: 0
+  mobileRootPath: 0
+--- !u!4 &302692769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302692765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &302692770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302692765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa7bdf849241b242afe32648ecd25c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  importAssets: 0
+  importAssetPath: _ImportedOBJ
 --- !u!1 &403831352
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &403831353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,8 +435,8 @@ MonoBehaviour:
   importAssetPath: _ImportedOBJ
   autoLoadOnStart: 1
   objectsList:
-  - name: test1
-    path: https://raw.githubusercontent.com/codemaker2015/unity3d-runtime-model-importer/master/models/OBJ_test/objtest_yup.obj
+  - name: At
+    path: https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/At/At_Modeli_Kaplamali.obj
     skip: 0
     loaderOptions:
       zUp: 1
@@ -284,8 +454,27 @@ MonoBehaviour:
       localPosition: {x: 0, y: 0.1, z: 0}
       localEulerAngles: {x: 0, y: 0, z: 0}
       localScale: {x: 1, y: 1, z: 1}
-  - name: test2
-    path: https://raw.githubusercontent.com/codemaker2015/unity3d-runtime-model-importer/master/models/OBJ_test/objtest_yup.obj
+  - name: Pokemon
+    path: https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/Pokemon/Pokemon.obj
+    skip: 0
+    loaderOptions:
+      zUp: 0
+      litDiffuse: 0
+      convertToDoubleSided: 0
+      modelScaling: 1
+      reuseLoaded: 1
+      inheritLayer: 0
+      buildColliders: 0
+      colliderConvex: 0
+      colliderTrigger: 0
+      use32bitIndices: 1
+      hideWhileLoading: 0
+      splitByMaterial: 0
+      localPosition: {x: 0, y: -0.1, z: 0}
+      localEulerAngles: {x: 180, y: 0, z: 0}
+      localScale: {x: 1, y: 1, z: 1}
+  - name: Ayi
+    path: https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/Ayi.obj
     skip: 0
     loaderOptions:
       zUp: 0
@@ -579,6 +768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000681005}
   - component: {fileID: 1000681004}
+  - component: {fileID: 1000681006}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -663,6 +853,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1000681006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000681003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1191206615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1317,7 @@ RectTransform:
   - {fileID: 515019965}
   - {fileID: 1792164797}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

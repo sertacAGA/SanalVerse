@@ -619,7 +619,6 @@ GameObject:
   - component: {fileID: 4667330456230611635}
   - component: {fileID: 4667330456230611634}
   - component: {fileID: 4667330456230611641}
-  - component: {fileID: 4667330456230611640}
   - component: {fileID: 4667330456230611642}
   m_Layer: 0
   m_Name: Kadin2
@@ -682,7 +681,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.89
+  m_Height: 1.8
   m_Radius: 0.18
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -773,7 +772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 2
-  height: 3
+  height: 2
   centerOffset: {x: 0, y: 2, z: 0}
   followOnStart: 0
   smoothSpeed: 2
@@ -843,18 +842,6 @@ MonoBehaviour:
     LayerIndex: 3
   - SynchronizeType: 0
     LayerIndex: 4
---- !u!114 &4667330456230611640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2120716219340376688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4667330456230611642
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2011,7 +2011,6 @@ GameObject:
   - component: {fileID: 6774539071293935124}
   - component: {fileID: 6774539071293935127}
   - component: {fileID: 6774539071293935126}
-  - component: {fileID: 6774539071293935129}
   - component: {fileID: 6774539071293935128}
   m_Layer: 0
   m_Name: Kadin1
@@ -2067,13 +2066,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.94
+  m_Height: 1.8
   m_Radius: 0.16
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: -0.03, y: 1.09, z: 0.07}
+  m_Center: {x: -0.03, y: 1.03, z: 0.07}
 --- !u!114 &6774539071293935120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2174,10 +2173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 2
-  height: 3
+  height: 2
   centerOffset: {x: 0, y: 2, z: 0}
   followOnStart: 0
-  smoothSpeed: 1
+  smoothSpeed: 2
 --- !u!114 &6774539071293935126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2222,18 +2221,6 @@ MonoBehaviour:
     LayerIndex: 0
   - SynchronizeType: 0
     LayerIndex: 1
---- !u!114 &6774539071293935129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6774539071293935131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6774539071293935128
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,82 +2,135 @@
 using System.IO;
 using System.Text;
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Networking;
+using Photon.Pun;
 
-public class ObjFromStream2 : MonoBehaviour {
+public class ObjFromStream2 : MonoBehaviourPun
+{
     private List<string> modelUrls = new List<string> {
         "https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/At/At_Modeli_Kaplamali.obj",
-        "https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/artiz-kedi.obj",
-        "https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/yunus-model.obj"
+        "https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/Pokemon/Pokemon.obj",
+        "https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/Ayi.obj"
     };
 
     private List<string> textureUrls = new List<string> {
         "https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/At/default_material-color.png",
-        "https://yourtextureurl.com/kedi-modeli-texture.jpg",
-        "https://yourtextureurl.com/yunus-modeli-texture.jpg"
+        "https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/Pokemon/Final_Pokemon_Diffuse.jpg",
+        "https://chatress.github.io/SanalVerse-Multiplayer-School-Simulator/3D/Ayi_kaplama.png"
     };
 
     private int currentModelIndex = 0;
+    private List<GameObject> models = new List<GameObject>(); 
     private GameObject currentModel;
 
-    void Start() {
-        LoadModel(currentModelIndex); // İlk modeli yükle
+    void Start()
+    {
+        StartCoroutine(LoadAllModels()); 
     }
 
-    void LoadModel(int index) {
-        // Eğer sahnede daha önce bir model varsa onu sil
-        if (currentModel != null) {
-            Destroy(currentModel);
-        }
+    IEnumerator LoadAllModels()
+    {
+        for (int i = 0; i < modelUrls.Count; i++)
+        {
+            UnityWebRequest www = UnityWebRequest.Get(modelUrls[i]);
+            yield return www.SendWebRequest();
 
-        // Yeni modeli yükle
-        var www = new WWW(modelUrls[index]);
-        while (!www.isDone)
-            System.Threading.Thread.Sleep(1);
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                var textStream = new MemoryStream(Encoding.UTF8.GetBytes(www.downloadHandler.text));
+                GameObject model = new OBJLoader().Load(textStream);
 
-        var textStream = new MemoryStream(Encoding.UTF8.GetBytes(www.text));
-        currentModel = new OBJLoader().Load(textStream);
+                model.transform.position = new Vector3(14, 1, 22);
+                model.transform.localScale = new Vector3(1f, 1f, 1f);
+                model.transform.rotation = Quaternion.Euler(0, 180, 0);
 
-        // Modeli sahneye yerleştir
-        currentModel.transform.position = new Vector3(15, 2, 19);
-        currentModel.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-        currentModel.transform.rotation = Quaternion.Euler(0, 180, 0);
+                Renderer[] renderers = model.GetComponentsInChildren<Renderer>();
+                if (renderers.Length > 0)
+                {
+                    Texture2D texture = null;
+                    yield return StartCoroutine(LoadTextureAsync(textureUrls[i], (tex) => texture = tex));
 
-        // Kaplamayı yükle ve modele uygula
-        Renderer renderer = currentModel.GetComponent<Renderer>();
-        if (renderer != null) {
-            Material newMaterial = new Material(Shader.Find("Standard"));
-            Texture2D texture = LoadTextureFromURL(textureUrls[index]);
-            if (texture != null) {
-                newMaterial.mainTexture = texture;
-                renderer.material = newMaterial;
+                    if (texture != null)
+                    {
+                        foreach (Renderer renderer in renderers)
+                        {
+                            Material newMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+                            newMaterial.mainTexture = texture;
+                            renderer.material = newMaterial;
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError("Kaplama yüklenemedi: " + textureUrls[i]);
+                    }
+                }
+
+                model.SetActive(false); 
+                models.Add(model); 
+                PhotonNetwork.Instantiate(model.name, model.transform.position, model.transform.rotation, 0); // Modeli ağda görünür hale getir
+            }
+            else
+            {
+                Debug.LogError("Model yüklenemedi: " + www.error);
             }
         }
+
+        if (models.Count > 0)
+        {
+            currentModel = models[0];
+            currentModel.SetActive(true);
+        }
     }
 
-    Texture2D LoadTextureFromURL(string url) {
-        WWW www = new WWW(url);
-        while (!www.isDone)
-            System.Threading.Thread.Sleep(1);
+    IEnumerator LoadTextureAsync(string url, System.Action<Texture2D> callback)
+    {
+        UnityWebRequest www = UnityWebRequestTexture.GetTexture(url);
+        yield return www.SendWebRequest();
 
-        if (string.IsNullOrEmpty(www.error)) {
-            return www.texture;
-        } else {
+        if (www.result == UnityWebRequest.Result.Success)
+        {
+            Texture2D texture = DownloadHandlerTexture.GetContent(www);
+            callback(texture);
+        }
+        else
+        {
             Debug.LogError("Kaplama yüklenemedi: " + www.error);
-            return null;
+            callback(null);
         }
     }
 
-    public void NextModel() {
-        currentModelIndex = (currentModelIndex + 1) % modelUrls.Count;
-        LoadModel(currentModelIndex);
+    [PunRPC]
+    void LoadModel(int index)
+    {
+        if (index < 0 || index >= models.Count) return;
+
+        // Mevcut modeli gizle
+        if (currentModel != null) currentModel.SetActive(false);
+
+        // Yeni modeli göster
+        currentModel = models[index];
+        currentModel.SetActive(true);
     }
 
-    public void PreviousModel() {
+    public void NextModel()
+    {
+        if (models.Count == 0) return;
+
+        currentModelIndex = (currentModelIndex + 1) % models.Count;
+        photonView.RPC("LoadModel", RpcTarget.All, currentModelIndex); // RPC ile tüm oyunculara yeni modeli yükle
+    }
+
+    public void PreviousModel()
+    {
+        if (models.Count == 0) return;
+
         currentModelIndex--;
-        if (currentModelIndex < 0) {
-            currentModelIndex = modelUrls.Count - 1;
+        if (currentModelIndex < 0)
+        {
+            currentModelIndex = models.Count - 1;
         }
-        LoadModel(currentModelIndex);
+        photonView.RPC("LoadModel", RpcTarget.All, currentModelIndex); // RPC ile tüm oyunculara yeni modeli yükle
     }
 }
