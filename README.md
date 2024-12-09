@@ -1,4 +1,3 @@
-![alt text](https://github.com/chatress/SanalVerse-Multiplayer-School-Simulator/blob/main/Ekran-1.png?raw=true)
 TÜRKÇE
 -----------------------------------------------------------------------
 Merhaba. Sanal Verse uygulaması ile Online çok oyunculu sınıf ve konferans buluşmalarınızı yapabilirsiniz.
@@ -24,7 +23,7 @@ Sandalyelere oturma etkileşimi yapılmıştır.
 
 Uygulamanın internet versiyonu (WebGL) bu linkten ulaşılabilir: https://simmer.io/@sertacaga/sanalverse ve https://sertacaga.itch.io/sanalverse
 
-![alt text](https://github.com/chatress/SanalVerse-Multiplayer-School-Simulator/blob/main/Ekran-2.jpg?raw=true)
+
 ENGLISH
 ----------------------------------------------------------------------
 Hello. You can have online multiplayer class and conference meetings with the Virtual Verse application.
@@ -49,5 +48,3 @@ In Class B, we can play a video that we have uploaded to the internet via the li
 Sitting interaction was done on the chairs.
 
 The internet version of the application (WebGL) can be accessed at this link: https://simmer.io/@sertacaga/sanalverse and https://sertacaga.itch.io/sanalverse
-
-![alt text](https://github.com/chatress/SanalVerse-Multiplayer-School-Simulator/blob/main/Ekran-3.png?raw=true)
