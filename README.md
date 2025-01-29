@@ -1,8 +1,10 @@
+![alt text](https://chatress.github.io/SanalVerse/Ekran-1.png)
+
 TÜRKÇE
 -----------------------------------------------------------------------
 Merhaba. Sanal Verse uygulaması ile Online çok oyunculu sınıf ve konferans buluşmalarınızı yapabilirsiniz.
 Uygulamamda yer alan özellikleri aşağıda belirttim:
-![alt text](https://github.com/chatress/SanalVerse/blob/Ekran-1.png?raw=true)
+
 Giriş ekranında isim giriş alanı vardır. Burada yer alan isim uygulamaya giriş yapıldığında aktif olmaktadır.
 
 Server sistemi ücretsiz Photon Engine 2 Multiplayer sistemi kullanılarak hazırlanmıştır.
@@ -26,7 +28,7 @@ Sandalyelere oturma etkileşimi vardır. Sunum ve video sınıfında 10'ar adet 
 Uygulamanın içerikleri github üzerinde barındırılmaktadır, isteğe göre başka bir sunucuda barındırılma imkanı vardır.
 
 Uygulamanın internet versiyonu (WebGL) bu linkten ulaşılabilir: https://simmer.io/@sertacaga/sanalverse ve https://sertacaga.itch.io/sanalverse ve https://play.unity.com/en/games/a2488a74-3bb2-4866-90c9-292808b5c801/sanalverse-yasam-simulator
-
+![alt text](https://chatress.github.io/SanalVerse/Ekran-2.jpg)
 
 ENGLISH
 ----------------------------------------------------------------------
@@ -56,3 +58,5 @@ Sitting interaction was done on the chairs. There are 10 chairs in each A and B 
 Application content is served here on Github, you can use a web server to serve your own content.
 
 The internet version of the application (WebGL) can be accessed at this link: https://simmer.io/@sertacaga/sanalverse and https://sertacaga.itch.io/sanalverse and https://play.unity.com/en/games/a2488a74-3bb2-4866-90c9-292808b5c801/sanalverse-yasam-simulator
+
+![alt text](https://chatress.github.io/SanalVerse/Ekran-3.png)
