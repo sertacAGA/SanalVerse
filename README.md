@@ -2,7 +2,7 @@ TÜRKÇE
 -----------------------------------------------------------------------
 Merhaba. Sanal Verse uygulaması ile Online çok oyunculu sınıf ve konferans buluşmalarınızı yapabilirsiniz.
 Uygulamamda yer alan özellikleri aşağıda belirttim:
-
+![alt text](https://github.com/chatress/SanalVerse/blob/Ekran-1.png?raw=true)
 Giriş ekranında isim giriş alanı vardır. Burada yer alan isim uygulamaya giriş yapıldığında aktif olmaktadır.
 
 Server sistemi ücretsiz Photon Engine 2 Multiplayer sistemi kullanılarak hazırlanmıştır.
