@@ -2,61 +2,74 @@
 
 TÜRKÇE
 -----------------------------------------------------------------------
-Merhaba. Sanal Verse uygulaması ile Online çok oyunculu sınıf ve konferans buluşmalarınızı yapabilirsiniz.
-Uygulamamda yer alan özellikleri aşağıda belirttim:
+Merhaba. Sanal Verse uygulaması ile Online çok oyunculu sınıf ve konferans buluşmalarınızı yapabileceğiniz bir uygulamadır.
 
-Giriş ekranında isim giriş alanı vardır. Burada yer alan isim uygulamaya giriş yapıldığında aktif olmaktadır.
+Uygulada yer alan özellikler aşağıda belirtilmiştir;
 
-Server sistemi ücretsiz Photon Engine 2 Multiplayer sistemi kullanılarak hazırlanmıştır.
+Giriş ekranında isim giriş alanı vardır. Burada yer alan isim uygulamaya giriş yapıldığında aktif olmaktadır. Avatar seçimi için roller mevcuttur; yetişkin, çocuk. Yetişkin olarak odaya bağlanan oyuncular içerikleri değiştirebilmektedirler. Çocuk seçimi yapan oyuncular içerik değiştirememektedir.
 
-Sesli iletişim için Photon Voice ücretsiz versiyonu kullanılmıştır. (Şu an çalışmıyor!)
+İkinci panelde avatar seçimi için modeller vardır. Model seçildikten sonra oda seçim ekranı belirmektedir. Oda ekranında Sınıf, Konferans Salonu, Atölye ve Ofis yer almaktadır. Oyunda açılmış olan odaları görebilmek için "Açık Odalar" adında bir düğme mevcuttur.
 
-Sohbet yapılabilmesi için Photon Chat ücretsiz versiyonu kullanılmıştır.
+Oda seçimi yapıldıktan sonra oyuncular girmiş olduğu odalardaki çoklu medya sistemlerini kullanabilmektedirler. Her odanın kullanıcı arayüzünde sesli iletişimi açıp kapatmak için düğme mevcuttur. Odada yer alan çoklu medya sistemi için gerekli düğmeler odalarda yer almaktadır.
 
-1 Odaya 20 Kişiye kadar ücretsiz katılım mevcuttur.
+Her odada ana menüye dönmek için bir çıkış düğmesi mevcuttur. Oyuncunun odalarda yer alan sandalyelere oturabilmesi için gerekli düğme sandalyeye yakınlaşınca aktif olmaktadır.
 
-Sahneye doğma sırasında karakter seçimi yapılabilmektedir. Karakterler Öğretmen ve öğrenci olmak üzere iki farklı türdedir.
+Server sistemi ücretsiz Photon Engine 2 Multiplayer sistemi kullanılarak hazırlanmıştır. Sesli iletişim için Photon Voice ücretsiz versiyonu kullanılmıştır. Sohbet yapılabilmesi için Photon Chat ücretsiz versiyonu kullanılmıştır. (Şu an aktif değildir!)
 
-A sınıfında resim slide gösterisi yapma imkanı vardır. Katılımcıların aynı anda görebildiği Slide geçişlerini yapmak için ileri ve geri düğmeleri eklenmiştir.
+Her odaya en fazla 16 kişi katılabilmektedir. 
 
-B sınıfında internete yüklemiş olduğumuz 3 adet videoyu link üzerinden oynatabiliyoruz. (Video bütün katılımcılar sınıfa giriş yaptıktan sonra aynı anda oynatılabilmektedir. Buffering veya video zaman takibi yoktur.)
+Sınıf tipi odada; çizim yapılabilen bir ekran yer almaktadır. Arayüzde Kalem ve Silgi düğmeleri mevcuttur. Bu düğmeler aracılığı ile ekrana çizim yapılabilmekte, sonrasında bu çizim çizimi paylaş düğmesi ile diğer oyunculara aktarılabilmektedir.
 
-C sınıfında 3 Boyutlu nesneleri sunabileceğiniz bir kaide yer almaktadır. Nesneleri ileri geri hareket ettirmek için sistem tasarlanmıştır.
+Ofis tipi odada; resim slide gösterisi yapılabilen bir ekran yer almaktadır. Ekranda yer alan resimler, oyuncular tarafından "Sunum Yükle" düğmesi ile değiştirilebilmektedir. Slide geçişlerini ileri veya geri oynatmak için düğmeler de mevcuttur.
 
-Sandalyelere oturma etkileşimi vardır. Sunum ve video sınıfında 10'ar adet sandalye yer almaktadır.
+Konferans Salonu tipi odada; internet üzerinden bağlantısını verdiğimiz 5 adet video oynatılabilmektedir. Video ekranındaki başlat ve dur komutları için arayüzde düğmeler mevcuttur. 
 
-Uygulamanın içerikleri github üzerinde barındırılmaktadır, isteğe göre başka bir sunucuda barındırılma imkanı vardır.
+Not: Sınıfa sonradan giriş yapan oyuncular için video senkronizasyonu henüz yapılmamıştır. Video durdurulduktan sonra tekrar başlatınca videoyu başa almaktadır.
 
-Uygulamanın internet versiyonu (WebGL) bu linkten ulaşılabilir: https://sertacaga.itch.io/sanalverse ve https://play.unity.com/en/games/a2488a74-3bb2-4866-90c9-292808b5c801/sanalverse-yasam-simulator
+Atölye tipi odada; 3 Boyutlu nesneler, nesne ve kaplama olarak yüklendikten sonra diğer oyunculara sunulabilmektedir. Kaide üzerinde 3 boyutlu nesneler belirmektedir. 3 Boyutlu Nesneleri değiştirmek için, ileri geri düğmeleri mevcuttur.
+
+Sınıflarda sandalyeler mevcuttur ve sandalyelerde oturma sistemi vardır. Uygula açıldığında yer alan içerikler github üzerinde barındırılmaktadır. Kullanıcı isteğe göre başka bir sunucudan resim, video veya 3 boyutlu nesne çağırabilmektedir.
+
+Uygulamanın internet versiyonu (WebGL) bu linkten ulaşılabilir: https://sertacaga.itch.io/sanalverse
+
+Uygulamanın Android versiyonu Google Play Store'da yer almaktadır: https://play.google.com/store/apps/details?id=com.crownbros.sanalverse
+
 ![alt text](https://sertacaga.github.io/SanalVerse/Ekran-2.jpg)
 
 ENGLISH
 ----------------------------------------------------------------------
-Hello. You can have online multiplayer class and conference meetings with the Virtual Verse application.
-I have stated the features of my application below:
+Hello. It is an application where you can make online multiplayer class and conference meetings with the Virtual Verse application.
 
-There is a name entry field on the login screen. The name given here becomes active when you log in to the application.
+The features in the application are listed below;
 
-The server system has been prepared using the free Photon Engine 2 Multiplayer system.
+There is a name entry field on the login screen. The name here is activated when the application is entered. There are roles for avatar selection; adult, child. Players who connect to the room as adults can change the content. Players who choose children cannot change the content.
 
-Photon Voice free version was used for voice communication. (Not working at the moment)
+There are models for avatar selection in the second panel. After the model is selected, the room selection screen appears. Classroom, Conference Hall, Workshop and Office are on the room screen. There is a button called "Open Rooms" to see the rooms opened in the game.
 
-Photon Chat free version was used for chatting.
+After the room selection is made, players can use the multimedia systems in the rooms they have entered. There is a button to turn on and off voice communication in the user interface of each room. The necessary buttons for the multimedia system in the room are located in the rooms.
 
-Free participation is available for up to 20 people in 1 room.
+There is an exit button in each room to return to the main menu. The button required for the player to sit on the chairs in the rooms is activated when they get close to the chair.
 
-Character selection can be made when spawning into the scene. Characters are of two different types, Teacher and student character types.
+The server system is prepared using the free Photon Engine 2 Multiplayer system. The free version of Photon Voice was used for voice communication. The free version of Photon Chat was used for chatting. (Currently inactive!)
 
-Class A has the opportunity to make a picture slide show. Forward and back buttons are coded to make slide transitions that participants can see at the same time.
+A maximum of 16 people can join each room.
 
-In Class B, we can play a video that we have uploaded to the internet via the link. (The video can be played at the same time after all participants log in to the class. Unfortunately, there is no buffering or video time tracking.)
+In the classroom type room; there is a screen where you can draw. There are Pen and Eraser buttons on the interface. You can draw on the screen with these buttons, and then this drawing can be transferred to other players with the share drawing button.
 
-Class C has a 3D presentation system with next model and back model with it.
+In the office type room; there is a screen where you can show a picture slide. The pictures on the screen can be changed by the players with the "Upload Presentation" button. There are also buttons to play the slide transitions forward or backward.
 
-Sitting interaction was done on the chairs. There are 10 chairs in each A and B classrooms.
+In the Conference Hall type room; 5 videos that we have provided the connection over the internet can be played. There are buttons on the interface for the start and stop commands on the video screen.
 
-Application content is served here on Github, you can use a web server to serve your own content.
+Note: Video synchronization has not yet been done for players who enter the class later. After the video is stopped, it starts the video again.
 
-The internet version of the application (WebGL) can be accessed at this link: https://sertacaga.itch.io/sanalverse and https://play.unity.com/en/games/a2488a74-3bb2-4866-90c9-292808b5c801/sanalverse-yasam-simulator
+In the workshop type room; 3D objects can be presented to other players after being uploaded as objects and skins. 3D objects appear on the base. There are forward and back buttons to change 3D objects.
+
+There are chairs in the classrooms and the chairs have a seating system. The content that appears when the application is opened is hosted on github. The user can call an image, video or 3D object from another server as desired.
+
+The internet version of the application (WebGL) can be accessed from this link: https://sertacaga.itch.io/sanalverse
+
+The Android version of the application is available on the Google Play Store: https://play.google.com/store/apps/details?id=com.crownbros.sanalverse
+
+The internet version of the application (WebGL) can be accessed at this link: https://sertacaga.itch.io/sanalverse
 
 ![alt text](https://sertacaga.github.io/SanalVerse/Ekran-3.png)
