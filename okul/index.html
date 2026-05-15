@@ -118,7 +118,7 @@
 </head>
 <body>
 
-    <button class="back-btn-static" onclick="window.location.href='../index.html'">🔙 HARİTAYA DÖN</button>
+    <button class="back-btn-static" onclick="window.location.href='../index.html#scene-map'">🔙 HARİTAYA DÖN</button>
 
     <a-scene embedded vr-mode-ui="enabled: false">
         <a-entity light="type: ambient; color: #CCC"></a-entity>
@@ -234,19 +234,19 @@ function renderStep() {
         case 3: content.innerHTML = `<ul>${lessonData.examples.map(e => `<li>${e}</li>`).join('')}</ul>`; break;
         case 4: content.innerHTML = `<p><strong>Görev:</strong> ${lessonData.activityText}</p><div id="drawing-canvas" style="height:200px; display:flex; align-items:center; justify-content:center; color:#bdc3c7;">[Çizim Alanı Aktif]</div>`; break;
         case 5: renderQuiz(lessonData.quiz); break;
-
-        // renderStep() içinde içeriği bastıktan hemen sonra eklenebilir
-        const speakBtn = document.createElement('button');
-        speakBtn.innerText = "🔊 Sesli Dinle";
-        speakBtn.className = "btn"; // Mevcut stilini kullanır
-        speakBtn.onclick = () => {
-            const synth = window.speechSynthesis;
-            const utterThis = new SpeechSynthesisUtterance(lessonData.text);
-            utterThis.lang = 'tr-TR';
-            synth.speak(utterThis);
-        };
-        content.appendChild(speakBtn);
     }
+
+    // Her adımda sesli dinleme butonunu ekle
+    const speakBtn = document.createElement('button');
+    speakBtn.innerText = "🔊 Sesli Dinle";
+    speakBtn.className = "btn";
+    speakBtn.onclick = () => {
+        const synth = window.speechSynthesis;
+        const utterThis = new SpeechSynthesisUtterance(lessonData.text);
+        utterThis.lang = 'tr-TR';
+        synth.speak(utterThis);
+    };
+    content.appendChild(speakBtn);
 
     // Butonları güncelle
     document.getElementById('btn-prev').disabled = (currentStep === 0);
@@ -295,7 +295,6 @@ function finishLesson() {
 // Uygulamayı başlat
 buildMenu();
     </script>
-<script src="quest-system.js"></script>
-<script src="icerik.js"></script>
+<script src="../quest-system.js"></script>
 </body>
 </html>
