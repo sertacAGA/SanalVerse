@@ -132,6 +132,9 @@ function renderBuild() {
 
 function addPart(id) {
     const part = parts.find(p => p.id === id);
+    if (gameState.parts.some(p => p.id === id)) {
+        return;
+    }
     gameState.parts.push(part);
     renderBuild();
 }
@@ -150,7 +153,7 @@ function renderTestArea() {
     document.getElementById("content").innerHTML = `
         <div style="text-align:center">
             <h2>Test Sürüşü Başlıyor!</h2>
-            <p>Drone'u hareket ettirmek için Fareyi kullan, ateş etmek için Tıkla!</p>
+            <p>WASD / Yön tuşlarıyla hareket et, Boşluk ile ateş et!</p>
             <div id="game-ui" style="display:flex; justify-content:center; gap:20px; font-weight:bold; color:#22c55e;">
                 <span>SÜRE: <span id="time">30</span></span>
                 <span>SKOR: <span id="score">0</span></span>
@@ -171,16 +174,37 @@ function startDroneGame() {
     let targets = [];
     const stats = calculateStats();
 
-    // Drone objesi
-    let drone = { x: 100, y: 250, size: 30 };
+    let drone = { x: 100, y: 250, size: 30, vx: 0, vy: 0 };
+    let bullets = [];
+    const keys = {};
 
-    // Fare takibi
-    canvas.onmousemove = (e) => {
-        const rect = canvas.getBoundingClientRect();
-        drone.y = e.clientY - rect.top;
+    const keydown = (e) => { keys[e.key.toLowerCase()] = true; };
+    const keyup = (e) => { keys[e.key.toLowerCase()] = false; };
+    window.addEventListener('keydown', keydown);
+    window.addEventListener('keyup', keyup);
+
+    const shoot = () => {
+        bullets.push({ x: drone.x + 45, y: drone.y, speed: 10 });
     };
 
+    const clickShoot = () => shoot();
+    canvas.addEventListener('click', clickShoot);
+
     const gameLoop = setInterval(() => {
+        drone.vx = 0;
+        drone.vy = 0;
+        if (keys['w'] || keys['arrowup']) drone.vy = -6;
+        if (keys['s'] || keys['arrowdown']) drone.vy = 6;
+        if (keys['a'] || keys['arrowleft']) drone.vx = -6;
+        if (keys['d'] || keys['arrowright']) drone.vx = 6;
+        if (keys[' ']) {
+            keys[' '] = false;
+            shoot();
+        }
+
+        drone.x = Math.max(0, Math.min(740, drone.x + drone.vx));
+        drone.y = Math.max(20, Math.min(480, drone.y + drone.vy));
+
         ctx.fillStyle = "#0f172a";
         ctx.fillRect(0,0,800,500);
 
@@ -211,6 +235,26 @@ function startDroneGame() {
             }
         });
 
+        bullets.forEach((b, bi) => {
+            b.x += b.speed;
+            ctx.fillStyle = '#fbbf24';
+            ctx.fillRect(b.x, b.y - 2, 12, 4);
+
+            if (b.x > 800) {
+                bullets.splice(bi, 1);
+                return;
+            }
+
+            targets.forEach((t, ti) => {
+                if (Math.abs(b.x - t.x) < 16 && Math.abs(b.y - t.y) < 16) {
+                    bullets.splice(bi, 1);
+                    targets.splice(ti, 1);
+                    score += 15;
+                    document.getElementById("score").innerText = score;
+                }
+            });
+        });
+
     }, 1000/60);
 
     const timer = setInterval(() => {
@@ -219,6 +263,9 @@ function startDroneGame() {
         if(timeLeft <= 0) {
             clearInterval(gameLoop);
             clearInterval(timer);
+            window.removeEventListener('keydown', keydown);
+            window.removeEventListener('keyup', keyup);
+            canvas.removeEventListener('click', clickShoot);
             endGame(score);
         }
     }, 1000);
@@ -239,7 +286,7 @@ function endGame(finalScore) {
             <p>Aracın test performansından <strong>${finalScore}</strong> puan kazandın.</p>
             <h2>Toplam Puanın: ${totalScore}</h2>
             <button class="btn-action" onclick="location.reload()">YENİ ÜRETİM</button>
-            <button class="btn-action" style="background:#3b82f6" onclick="window.location.href='../index.html'">HARİTAYA DÖN</button>
+            <button class="btn-action" style="background:#3b82f6" onclick="window.location.href='../index.html#scene-map'">HARİTAYA DÖN</button>
         </div>
     `;
 }
