@@ -118,7 +118,7 @@
 </head>
 <body>
 
-    <button class="back-btn-static" onclick="window.location.href='../index.html'">🔙 HARİTAYA DÖN</button>
+    <button class="back-btn-static" onclick="window.location.href='../index.html#scene-map'">🔙 HARİTAYA DÖN</button>
 
     <a-scene embedded vr-mode-ui="enabled: false">
         <a-entity light="type: ambient; color: #CCC"></a-entity>
@@ -177,6 +177,15 @@ let currentLesson = null;
 let currentStep = 0;
 let userScore = parseInt(localStorage.getItem('userScore')) || 0;
 
+function getSubjectByLessonId(lessonId) {
+    for (const item of curriculumData) {
+        if (item.lessons.some(lesson => lesson.id === lessonId)) {
+            return item.subject;
+        }
+    }
+    return null;
+}
+
 // Puanı ekranda güncelle
 document.getElementById('score-display').innerText = userScore + " Puan";
 
@@ -234,19 +243,19 @@ function renderStep() {
         case 3: content.innerHTML = `<ul>${lessonData.examples.map(e => `<li>${e}</li>`).join('')}</ul>`; break;
         case 4: content.innerHTML = `<p><strong>Görev:</strong> ${lessonData.activityText}</p><div id="drawing-canvas" style="height:200px; display:flex; align-items:center; justify-content:center; color:#bdc3c7;">[Çizim Alanı Aktif]</div>`; break;
         case 5: renderQuiz(lessonData.quiz); break;
-
-        // renderStep() içinde içeriği bastıktan hemen sonra eklenebilir
-        const speakBtn = document.createElement('button');
-        speakBtn.innerText = "🔊 Sesli Dinle";
-        speakBtn.className = "btn"; // Mevcut stilini kullanır
-        speakBtn.onclick = () => {
-            const synth = window.speechSynthesis;
-            const utterThis = new SpeechSynthesisUtterance(lessonData.text);
-            utterThis.lang = 'tr-TR';
-            synth.speak(utterThis);
-        };
-        content.appendChild(speakBtn);
     }
+
+    // Her adımda sesli dinleme butonunu ekle
+    const speakBtn = document.createElement('button');
+    speakBtn.innerText = "🔊 Sesli Dinle";
+    speakBtn.className = "btn";
+    speakBtn.onclick = () => {
+        const synth = window.speechSynthesis;
+        const utterThis = new SpeechSynthesisUtterance(lessonData.text);
+        utterThis.lang = 'tr-TR';
+        synth.speak(utterThis);
+    };
+    content.appendChild(speakBtn);
 
     // Butonları güncelle
     document.getElementById('btn-prev').disabled = (currentStep === 0);
@@ -288,6 +297,13 @@ function finishLesson() {
     userScore += currentLesson.points;
     localStorage.setItem('userScore', userScore);
     document.getElementById('score-display').innerText = userScore + " Puan";
+
+    if (window.questManager) {
+        window.questManager.completeQuest('school_first_lesson');
+        const subjectName = getSubjectByLessonId(currentLesson.id);
+        window.questManager.trackSchoolLesson(subjectName);
+    }
+
     alert("Tebrikler! Dersi tamamladın ve puan kazandın.");
     location.reload(); // Veya haritaya dön
 }
@@ -295,7 +311,6 @@ function finishLesson() {
 // Uygulamayı başlat
 buildMenu();
     </script>
-<script src="quest-system.js"></script>
-<script src="icerik.js"></script>
+<script src="../quest-system.js"></script>
 </body>
 </html>

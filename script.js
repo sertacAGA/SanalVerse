@@ -10,6 +10,7 @@ let lastMenu = 'scene-menu';
 
 // SİSTEM BAŞLANGICI: HAFIZAYI KONTROL ET
 window.onload = function() {
+    const openMapDirectly = window.location.hash === '#scene-map';
     // Oyuncu daha önce giriş yapmış mı?
     if(localStorage.getItem('isLoggedIn') === 'true') {
         // Verileri hafızadan çek
@@ -23,7 +24,10 @@ window.onload = function() {
 
         // Başlangıç ekranlarını geçip direkt menüyü aç
         document.querySelectorAll('.scene').forEach(scene => scene.classList.remove('active'));
-        document.getElementById('scene-menu').classList.add('active');
+        document.getElementById(openMapDirectly ? 'scene-map' : 'scene-menu').classList.add('active');
+    } else if (openMapDirectly) {
+        document.querySelectorAll('.scene').forEach(scene => scene.classList.remove('active'));
+        document.getElementById('scene-map').classList.add('active');
     }
 };
 
