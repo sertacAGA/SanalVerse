@@ -53,7 +53,7 @@ function toggleSettings() {
 }
 
 // OYUNU SIFIRLA / ÇIKIŞ YAP
-function logout() {
+function resetGame() {
     localStorage.clear(); // Senin yazdığın tüm kayıtları siler
     
     // ==========================================
@@ -68,6 +68,33 @@ function logout() {
 
     location.reload();    // Sayfayı baştan yükle
 }
+
+function quitGame() {
+    localStorage.setItem('isLoggedIn', 'true');
+    alert('Oyun kaydedildi. Daha sonra kaldığın yerden devam edebilirsin.');
+    window.location.href = 'about:blank';
+}
+
+function updateHudTime() {
+    const hud = document.getElementById('hud-time');
+    if (!hud) return;
+
+    const careerState = JSON.parse(localStorage.getItem('careerState') || '{"day":1,"hour":8}');
+    const hour = careerState.hour || 8;
+    hud.innerText = `🕒 Gün ${careerState.day || 1} - ${String(hour).padStart(2, '0')}:00`;
+
+    if (hour >= 21) {
+        hud.innerText += ' | 😴 Uyku vakti!';
+    }
+}
+
+setInterval(() => {
+    if (!window.questManager) return;
+    window.questManager.advanceGameTime(1);
+    updateHudTime();
+}, 30000);
+
+setInterval(updateHudTime, 1000);
 
 // GİRİŞ KONTROLÜ VE ROL MANTIĞI
 function validateAndGo(nextSceneId) {

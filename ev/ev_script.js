@@ -53,6 +53,12 @@ function renderProfile() {
 }
 
 function endDay() {
+    const careerStateBefore = JSON.parse(localStorage.getItem('careerState') || '{"day":1,"hour":8}');
+    if ((careerStateBefore.hour || 8) < 21) {
+        alert(`Henüz erken! Saat ${String(careerStateBefore.hour || 8).padStart(2, '0')}:00, uyku vakti 21:00.`);
+        return;
+    }
+
     if (window.questManager) {
         window.questManager.endDayAtHome();
     }

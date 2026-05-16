@@ -26,7 +26,8 @@
                 
                 <button class="btn secondary" style="min-width: 120px;" onclick="toggleSettings()">TAMAM</button>
                 <br>
-                <button onclick="logout()" class="modal-logout-btn">Oturumu Kapat / Sıfırla</button>
+                <button onclick="quitGame()" class="modal-logout-btn">Oyundan Çık</button>
+                <button onclick="resetGame()" class="modal-logout-btn">Oyunu Sıfırla</button>
             </div>
         </div>
 
@@ -95,7 +96,7 @@
                     <span>MEYDAN</span>
                 </div>
             </div>
-            <button class="logout-link" onclick="logout()">🚪 Oturumu Kapat ve Sıfırla</button>
+            <button class="logout-link" onclick="resetGame()">🚪 Oyunu Sıfırla</button>
         </div>
 
         <div id="scene-map" class="scene full-screen">
@@ -103,7 +104,8 @@
             
             <div class="top-controls">
                 <button class="back-btn-static" onclick="goToScene('scene-menu')">🔙 MENÜ</button>
-                <button class="exit-btn-static" onclick="logout()">ÇIKIŞ ❌</button>
+                <button class="exit-btn-static" onclick="quitGame()">ÇIKIŞ ❌</button>
+                <div id="hud-time" class="room-title-badge" style="position: static; margin-left: 10px;">🕒 Gün 1 - 08:00</div>
             </div>
 
             <div class="hotspot school" onclick="window.location.href='okul/index.html'"><span class="label">OKUL</span></div>

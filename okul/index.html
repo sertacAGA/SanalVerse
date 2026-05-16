@@ -301,7 +301,7 @@ function finishLesson() {
     if (window.questManager) {
         window.questManager.completeQuest('school_first_lesson');
         const subjectName = getSubjectByLessonId(currentLesson.id);
-        window.questManager.trackSchoolLesson(subjectName);
+        window.questManager.trackSchoolLesson(subjectName, currentLesson.id);
     }
 
     alert("Tebrikler! Dersi tamamladın ve puan kazandın.");

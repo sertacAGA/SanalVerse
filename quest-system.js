@@ -12,6 +12,7 @@ class QuestManager {
         this.visitedLocations = this.loadVisitedLocations();
         this.productionCategories = this.loadProductionCategories();
         this.schoolSubjects = this.loadSchoolSubjects();
+        this.completedLessonIds = this.loadCompletedLessonIds();
         this.careerState = this.loadCareerState();
         this.init();
     }
@@ -55,7 +56,7 @@ class QuestManager {
 
             // KARİYER ZİNCİRİ
             { id: 'career_go_to_school', title: '🎯 Kariyere Başlangıç', description: 'Önce okula gidip eğitimine başla', location: 'Okul', reward: 75, type: 'career' },
-            { id: 'career_pass_core_lessons', title: '🎓 Temel Eğitimi Tamamla', description: '6 ana alandan en az bir dersi tamamla', location: 'Okul', reward: 300, type: 'career' },
+            { id: 'career_pass_core_lessons', title: '🎓 Temel Eğitimi Tamamla', description: 'Okulda toplam 5 dersi tamamla (5/5)', location: 'Okul', reward: 300, type: 'career' },
             { id: 'career_first_job_apply', title: '🧾 İlk İş Başvurusu', description: 'Eğitimden sonra ilk işi kabul et', location: 'Cafe / Ofis', reward: 120, type: 'career' },
             { id: 'career_first_income', title: '💰 İlk Kazanç', description: 'İlk kariyer gelirini kazan', location: 'Kasaba', reward: 150, type: 'career' },
             { id: 'career_end_day_1', title: '🌙 Günü Bitir', description: 'Eve gidip günü tamamla', location: 'Ev', reward: 80, type: 'career' },
@@ -90,7 +91,12 @@ class QuestManager {
 
     loadCareerState() {
         const saved = localStorage.getItem('careerState');
-        return saved ? JSON.parse(saved) : { day: 1, hasIncome: false, firstJobApplied: false };
+        return saved ? JSON.parse(saved) : { day: 1, hasIncome: false, firstJobApplied: false, hour: 8 };
+    }
+
+    loadCompletedLessonIds() {
+        const saved = localStorage.getItem('careerCompletedLessons');
+        return saved ? JSON.parse(saved) : [];
     }
 
     saveProgress() {
@@ -100,6 +106,7 @@ class QuestManager {
         localStorage.setItem('visitedLocations', JSON.stringify(this.visitedLocations));
         localStorage.setItem('productionCategories', JSON.stringify(this.productionCategories));
         localStorage.setItem('careerSchoolSubjects', JSON.stringify(this.schoolSubjects));
+        localStorage.setItem('careerCompletedLessons', JSON.stringify(this.completedLessonIds));
         localStorage.setItem('careerState', JSON.stringify(this.careerState));
     }
 
@@ -237,14 +244,18 @@ class QuestManager {
         }
     }
 
-    trackSchoolLesson(subjectName) {
-        if (!subjectName) return;
-        if (!this.schoolSubjects.includes(subjectName)) {
+    trackSchoolLesson(subjectName, lessonId = null) {
+        if (lessonId && !this.completedLessonIds.includes(lessonId)) {
+            this.completedLessonIds.push(lessonId);
+            this.saveProgress();
+        }
+
+        if (subjectName && !this.schoolSubjects.includes(subjectName)) {
             this.schoolSubjects.push(subjectName);
             this.saveProgress();
         }
 
-        if (this.schoolSubjects.length >= 6) {
+        if (this.completedLessonIds.length >= 5) {
             this.completeQuest('career_pass_core_lessons');
             this.activateQuest('career_first_job_apply');
         }
@@ -269,12 +280,17 @@ class QuestManager {
     }
 
     endDayAtHome() {
-        if (this.careerState.day === 1) {
-            this.completeQuest('career_end_day_1');
-            this.careerState.day = 2;
-            this.saveProgress();
-            this.completeQuest('career_day_2_continue');
-        }
+        this.completeQuest('career_end_day_1');
+        this.careerState.day += 1;
+        this.careerState.hour = 8;
+        this.saveProgress();
+        if (this.careerState.day >= 2) this.completeQuest('career_day_2_continue');
+    }
+
+    advanceGameTime(hours = 1) {
+        this.careerState.hour = (this.careerState.hour || 8) + hours;
+        this.saveProgress();
+        return this.careerState.hour;
     }
 
     trackProduction(category) {
