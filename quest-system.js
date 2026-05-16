@@ -185,12 +185,16 @@ class QuestManager {
 
     createQuestCard(quest, status) {
         const isCompleted = status === 'completed';
+        let description = quest.description;
+        if (quest.id === 'career_pass_core_lessons' && !isCompleted) {
+            description = `Okulda toplam 5 dersi tamamla (${this.getEducationProgress()})`;
+        }
         return `
             <div style="background: ${isCompleted ? 'rgba(34,197,94,0.2)' : 'rgba(59,130,246,0.2)'};
                 border-left: 4px solid ${isCompleted ? '#22c55e' : '#3b82f6'};
                 padding: 12px; margin-bottom: 10px; border-radius: 8px; ${isCompleted ? 'opacity: 0.7;' : ''}">
                 <div style="font-weight: bold; font-size: 13px; margin-bottom: 5px;">${quest.title}</div>
-                <div style="font-size: 11px; color: #ccc; margin-bottom: 5px;">${quest.description}</div>
+                <div style="font-size: 11px; color: #ccc; margin-bottom: 5px;">${description}</div>
                 <div style="display: flex; justify-content: space-between; font-size: 11px;">
                     <span style="color: #888;">📍 ${quest.location}</span>
                     <span style="color: #fbbf24; font-weight: bold;">+${quest.reward} puan</span>

@@ -280,6 +280,11 @@ function endGame(finalScore) {
     totalScore += finalScore;
     localStorage.setItem('userScore', totalScore);
 
+    if (window.questManager) {
+        window.questManager.completeQuest('workshop_first_vehicle');
+        window.questManager.gainWorkshopProgress();
+    }
+
     document.getElementById("content").innerHTML = `
         <div class="card" style="text-align:center">
             <h1>Üretim Tamamlandı!</h1>
