@@ -10,13 +10,14 @@
 <body>
 
 <div class="game-container ev-theme" style="background-image: url('./images/bg_home.jpg') !important; background-size: cover; background-position: center;">        
-        <button class="back-btn" onclick="window.location.href='../index.html'">🔙 HARİTAYA DÖN</button>
+        <button class="back-btn" onclick="window.location.href='../index.html#scene-map'">🔙 HARİTAYA DÖN</button>
 
         <div class="room-title-badge">EVİM - DİNLENME & PROFİL</div>
 
         <div class="home-menu">
             <button class="action-btn" onclick="openModal('profile-modal')">👤 Karakter Özellikleri</button>
             <button class="action-btn" onclick="openModal('tv-modal')">📺 Televizyon İzle</button>
+            <button class="action-btn" onclick="endDay()">🌙 Günü Bitir</button>
             </div>
 
         <div id="profile-modal" class="custom-modal">
@@ -49,7 +50,7 @@
 
     </div>
 
-<script src="quest-system.js"></script>
+<script src="../quest-system.js"></script>
 <script src="ev_script.js"></script>
 </body>
 </html>
