@@ -177,6 +177,15 @@ let currentLesson = null;
 let currentStep = 0;
 let userScore = parseInt(localStorage.getItem('userScore')) || 0;
 
+function getSubjectByLessonId(lessonId) {
+    for (const item of curriculumData) {
+        if (item.lessons.some(lesson => lesson.id === lessonId)) {
+            return item.subject;
+        }
+    }
+    return null;
+}
+
 // Puanı ekranda güncelle
 document.getElementById('score-display').innerText = userScore + " Puan";
 
@@ -288,6 +297,13 @@ function finishLesson() {
     userScore += currentLesson.points;
     localStorage.setItem('userScore', userScore);
     document.getElementById('score-display').innerText = userScore + " Puan";
+
+    if (window.questManager) {
+        window.questManager.completeQuest('school_first_lesson');
+        const subjectName = getSubjectByLessonId(currentLesson.id);
+        window.questManager.trackSchoolLesson(subjectName);
+    }
+
     alert("Tebrikler! Dersi tamamladın ve puan kazandın.");
     location.reload(); // Veya haritaya dön
 }

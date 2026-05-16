@@ -11,13 +11,20 @@ class QuestManager {
         this.totalScore = parseInt(localStorage.getItem('userScore')) || 0;
         this.visitedLocations = this.loadVisitedLocations();
         this.productionCategories = this.loadProductionCategories();
+        this.schoolSubjects = this.loadSchoolSubjects();
+        this.careerState = this.loadCareerState();
         this.init();
     }
 
     init() {
         this.createQuestUI();
+        this.initCareerFlow();
         this.updateQuestDisplay();
         this.checkMilestones();
+    }
+
+    initCareerFlow() {
+        this.activateQuest('career_go_to_school');
     }
 
     loadQuests() {
@@ -44,7 +51,15 @@ class QuestManager {
             
             // GENEL
             { id: 'general_visit_all', title: '🗺️ Tüm Bölgeleri Keşfet', description: 'Okul, Cafe, Atölye, Ofis ve Evi ziyaret et', location: 'Kasaba', reward: 200, type: 'exploration' },
-            { id: 'general_master_inventor', title: '🔧 Usta Mucit', description: 'Toplam 2000 puan kazan', location: 'Kasaba', reward: 1000, type: 'milestone' }
+            { id: 'general_master_inventor', title: '🔧 Usta Mucit', description: 'Toplam 2000 puan kazan', location: 'Kasaba', reward: 1000, type: 'milestone' },
+
+            // KARİYER ZİNCİRİ
+            { id: 'career_go_to_school', title: '🎯 Kariyere Başlangıç', description: 'Önce okula gidip eğitimine başla', location: 'Okul', reward: 75, type: 'career' },
+            { id: 'career_pass_core_lessons', title: '🎓 Temel Eğitimi Tamamla', description: '6 ana alandan en az bir dersi tamamla', location: 'Okul', reward: 300, type: 'career' },
+            { id: 'career_first_job_apply', title: '🧾 İlk İş Başvurusu', description: 'Eğitimden sonra ilk işi kabul et', location: 'Cafe / Ofis', reward: 120, type: 'career' },
+            { id: 'career_first_income', title: '💰 İlk Kazanç', description: 'İlk kariyer gelirini kazan', location: 'Kasaba', reward: 150, type: 'career' },
+            { id: 'career_end_day_1', title: '🌙 Günü Bitir', description: 'Eve gidip günü tamamla', location: 'Ev', reward: 80, type: 'career' },
+            { id: 'career_day_2_continue', title: '🌅 Ertesi Gün', description: '2. güne geçip kariyere devam et', location: 'Kasaba', reward: 100, type: 'career' }
         ];
     }
 
@@ -68,12 +83,24 @@ class QuestManager {
         return saved ? JSON.parse(saved) : [];
     }
 
+    loadSchoolSubjects() {
+        const saved = localStorage.getItem('careerSchoolSubjects');
+        return saved ? JSON.parse(saved) : [];
+    }
+
+    loadCareerState() {
+        const saved = localStorage.getItem('careerState');
+        return saved ? JSON.parse(saved) : { day: 1, hasIncome: false, firstJobApplied: false };
+    }
+
     saveProgress() {
         localStorage.setItem('activeQuests', JSON.stringify(this.activeQuests));
         localStorage.setItem('completedQuests', JSON.stringify(this.completedQuests));
         localStorage.setItem('userScore', this.totalScore);
         localStorage.setItem('visitedLocations', JSON.stringify(this.visitedLocations));
         localStorage.setItem('productionCategories', JSON.stringify(this.productionCategories));
+        localStorage.setItem('careerSchoolSubjects', JSON.stringify(this.schoolSubjects));
+        localStorage.setItem('careerState', JSON.stringify(this.careerState));
     }
 
     createQuestUI() {
@@ -201,6 +228,52 @@ class QuestManager {
             if (this.visitedLocations.length >= 5) {
                 this.completeQuest('general_visit_all');
             }
+
+            const nameLower = locationName.toLowerCase();
+            if (nameLower.includes('okul')) {
+                this.completeQuest('career_go_to_school');
+                this.activateQuest('career_pass_core_lessons');
+            }
+        }
+    }
+
+    trackSchoolLesson(subjectName) {
+        if (!subjectName) return;
+        if (!this.schoolSubjects.includes(subjectName)) {
+            this.schoolSubjects.push(subjectName);
+            this.saveProgress();
+        }
+
+        if (this.schoolSubjects.length >= 6) {
+            this.completeQuest('career_pass_core_lessons');
+            this.activateQuest('career_first_job_apply');
+        }
+    }
+
+    trackJobApplication() {
+        if (!this.careerState.firstJobApplied) {
+            this.careerState.firstJobApplied = true;
+            this.saveProgress();
+            this.completeQuest('career_first_job_apply');
+            this.activateQuest('career_first_income');
+        }
+    }
+
+    trackIncome(amount = 0) {
+        if (amount > 0 && !this.careerState.hasIncome) {
+            this.careerState.hasIncome = true;
+            this.saveProgress();
+            this.completeQuest('career_first_income');
+            this.activateQuest('career_end_day_1');
+        }
+    }
+
+    endDayAtHome() {
+        if (this.careerState.day === 1) {
+            this.completeQuest('career_end_day_1');
+            this.careerState.day = 2;
+            this.saveProgress();
+            this.completeQuest('career_day_2_continue');
         }
     }
 

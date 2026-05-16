@@ -51,3 +51,12 @@ function renderProfile() {
         window.questManager.completeQuest('home_check_profile');
     }
 }
+
+function endDay() {
+    if (window.questManager) {
+        window.questManager.endDayAtHome();
+    }
+
+    const careerState = JSON.parse(localStorage.getItem('careerState') || '{"day":1}');
+    alert(`Gün tamamlandı. Yeni gün: ${careerState.day || 1}`);
+}

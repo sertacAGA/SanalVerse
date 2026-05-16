@@ -26,6 +26,8 @@ function acceptJob(jobName, reward) {
 
     if (window.questManager) {
         window.questManager.completeQuest('cafe_first_order');
+        window.questManager.trackJobApplication();
+        window.questManager.trackIncome(reward);
     }
 
     // Bildirim göster
