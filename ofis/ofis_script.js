@@ -8,7 +8,7 @@ window.onload = () => {
     if(welcomeText) welcomeText.innerText = `Hoş geldin ${playerName}, projen sunuma hazır mı?`;
 };
 
-function goBackToMap() { window.location.href = '../index.html'; }
+function goBackToMap() { window.location.href = '../index.html#scene-map'; }
 
 function startPresentation() {
     // Bilgileri tam bu anda çekiyoruz
@@ -64,4 +64,10 @@ function finishPresentation() {
     
     btnElement.innerText = 'HARİTAYA DÖN';
     btnElement.onclick = goBackToMap;
+
+    if (window.questManager) {
+        window.questManager.completeQuest('office_first_presentation');
+        window.questManager.completeQuest('office_high_score');
+        window.questManager.gainOfficeProgress();
+    }
 }

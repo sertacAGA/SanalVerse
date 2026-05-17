@@ -10,6 +10,7 @@ let lastMenu = 'scene-menu';
 
 // SİSTEM BAŞLANGICI: HAFIZAYI KONTROL ET
 window.onload = function() {
+    const openMapDirectly = window.location.hash === '#scene-map';
     // Oyuncu daha önce giriş yapmış mı?
     if(localStorage.getItem('isLoggedIn') === 'true') {
         // Verileri hafızadan çek
@@ -23,7 +24,10 @@ window.onload = function() {
 
         // Başlangıç ekranlarını geçip direkt menüyü aç
         document.querySelectorAll('.scene').forEach(scene => scene.classList.remove('active'));
-        document.getElementById('scene-menu').classList.add('active');
+        document.getElementById(openMapDirectly ? 'scene-map' : 'scene-menu').classList.add('active');
+    } else if (openMapDirectly) {
+        document.querySelectorAll('.scene').forEach(scene => scene.classList.remove('active'));
+        document.getElementById('scene-map').classList.add('active');
     }
 };
 
@@ -49,7 +53,7 @@ function toggleSettings() {
 }
 
 // OYUNU SIFIRLA / ÇIKIŞ YAP
-function logout() {
+function resetGame() {
     localStorage.clear(); // Senin yazdığın tüm kayıtları siler
     
     // ==========================================
@@ -64,6 +68,42 @@ function logout() {
 
     location.reload();    // Sayfayı baştan yükle
 }
+
+function quitGame() {
+    localStorage.setItem('isLoggedIn', 'true');
+    alert('Oyun kaydedildi. Daha sonra kaldığın yerden devam edebilirsin.');
+    window.location.href = 'about:blank';
+}
+
+function updateHudTime() {
+    const hud = document.getElementById('hud-time');
+    if (!hud) return;
+
+    const careerState = JSON.parse(localStorage.getItem('careerState') || '{"day":1,"hour":8}');
+    const hour = careerState.hour || 8;
+    hud.innerText = `🕒 Gün ${careerState.day || 1} - ${String(hour).padStart(2, '0')}:00`;
+
+    if (hour >= 21) {
+        hud.innerText += ' | 😴 Uyku vakti!';
+    }
+}
+
+function updateHudStats() {
+    const hud = document.getElementById('hud-stats');
+    if (!hud) return;
+    const stats = JSON.parse(localStorage.getItem('playerStats') || '{"intelligence":1,"strength":1,"talent":1,"energy":100,"actionPoints":10,"money":0}');
+    const lessons = JSON.parse(localStorage.getItem('careerCompletedLessons') || '[]').length;
+    hud.innerText = `🧠${stats.intelligence} 💪${stats.strength} 🎨${stats.talent} ⚡${stats.energy} AP${stats.actionPoints} 💰${stats.money} | Eğitim ${Math.min(lessons,5)}/5`;
+}
+
+setInterval(() => {
+    if (!window.questManager) return;
+    window.questManager.advanceGameTime(1);
+    updateHudTime();
+}, 5000);
+
+setInterval(updateHudTime, 1000);
+setInterval(updateHudStats, 1000);
 
 // GİRİŞ KONTROLÜ VE ROL MANTIĞI
 function validateAndGo(nextSceneId) {
