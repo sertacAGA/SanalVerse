@@ -378,6 +378,20 @@ class QuestManager {
         return `${Math.min(this.completedLessonIds.length, 5)}/5`;
     }
 
+    endDayAtHome() {
+        this.completeQuest('career_end_day_1');
+        this.careerState.day += 1;
+        this.careerState.hour = 8;
+        this.saveProgress();
+        if (this.careerState.day >= 2) this.completeQuest('career_day_2_continue');
+    }
+
+    advanceGameTime(hours = 1) {
+        this.careerState.hour = (this.careerState.hour || 8) + hours;
+        this.saveProgress();
+        return this.careerState.hour;
+    }
+
     trackProduction(category) {
         if (!this.productionCategories.includes(category)) {
             this.productionCategories.push(category);
