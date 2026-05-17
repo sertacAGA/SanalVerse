@@ -88,13 +88,22 @@ function updateHudTime() {
     }
 }
 
+function updateHudStats() {
+    const hud = document.getElementById('hud-stats');
+    if (!hud) return;
+    const stats = JSON.parse(localStorage.getItem('playerStats') || '{"intelligence":1,"strength":1,"talent":1,"energy":100,"actionPoints":10,"money":0}');
+    const lessons = JSON.parse(localStorage.getItem('careerCompletedLessons') || '[]').length;
+    hud.innerText = `🧠${stats.intelligence} 💪${stats.strength} 🎨${stats.talent} ⚡${stats.energy} AP${stats.actionPoints} 💰${stats.money} | Eğitim ${Math.min(lessons,5)}/5`;
+}
+
 setInterval(() => {
     if (!window.questManager) return;
     window.questManager.advanceGameTime(1);
     updateHudTime();
-}, 30000);
+}, 5000);
 
 setInterval(updateHudTime, 1000);
+setInterval(updateHudStats, 1000);
 
 // GİRİŞ KONTROLÜ VE ROL MANTIĞI
 function validateAndGo(nextSceneId) {

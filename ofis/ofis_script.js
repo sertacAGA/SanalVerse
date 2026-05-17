@@ -68,5 +68,6 @@ function finishPresentation() {
     if (window.questManager) {
         window.questManager.completeQuest('office_first_presentation');
         window.questManager.completeQuest('office_high_score');
+        window.questManager.gainOfficeProgress();
     }
 }

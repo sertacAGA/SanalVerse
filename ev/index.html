@@ -17,8 +17,23 @@
         <div class="home-menu">
             <button class="action-btn" onclick="openModal('profile-modal')">👤 Karakter Özellikleri</button>
             <button class="action-btn" onclick="openModal('tv-modal')">📺 Televizyon İzle</button>
+            <button class="action-btn" onclick="openModal('upgrade-modal')">🛠️ Geliştirme Mağazası</button>
             <button class="action-btn" onclick="endDay()">🌙 Günü Bitir</button>
             </div>
+
+        <div id="upgrade-modal" class="custom-modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('upgrade-modal')">X</button>
+                <h2>Geliştirme Mağazası</h2>
+                <p id="upgrade-money-info">Para: 0 ₺</p>
+                <div class="home-menu" style="gap:8px;">
+                    <button class="action-btn" onclick="buyUpgrade('school')">🧠 Okul Geliştirmesi</button>
+                    <button class="action-btn" onclick="buyUpgrade('workshop')">💪 Atölye Geliştirmesi</button>
+                    <button class="action-btn" onclick="buyUpgrade('office')">🎨 Ofis Geliştirmesi</button>
+                    <button class="action-btn" onclick="buyUpgrade('cafe')">☕ Cafe Geliştirmesi</button>
+                </div>
+            </div>
+        </div>
 
         <div id="profile-modal" class="custom-modal">
             <div class="modal-content">

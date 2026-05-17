@@ -14,6 +14,7 @@ class QuestManager {
         this.schoolSubjects = this.loadSchoolSubjects();
         this.completedLessonIds = this.loadCompletedLessonIds();
         this.careerState = this.loadCareerState();
+        this.playerStats = this.loadPlayerStats();
         this.init();
     }
 
@@ -25,6 +26,7 @@ class QuestManager {
     }
 
     initCareerFlow() {
+        this.activateQuest('general_visit_all');
         this.activateQuest('career_go_to_school');
     }
 
@@ -55,7 +57,7 @@ class QuestManager {
             { id: 'general_master_inventor', title: '🔧 Usta Mucit', description: 'Toplam 2000 puan kazan', location: 'Kasaba', reward: 1000, type: 'milestone' },
 
             // KARİYER ZİNCİRİ
-            { id: 'career_go_to_school', title: '🎯 Kariyere Başlangıç', description: 'Önce okula gidip eğitimine başla', location: 'Okul', reward: 75, type: 'career' },
+            { id: 'career_go_to_school', title: '🎯 Kariyere Başlangıç', description: 'Kasabayı keşfet ve binalara girerek görevleri aç', location: 'Kasaba', reward: 75, type: 'career' },
             { id: 'career_pass_core_lessons', title: '🎓 Temel Eğitimi Tamamla', description: 'Okulda toplam 5 dersi tamamla (5/5)', location: 'Okul', reward: 300, type: 'career' },
             { id: 'career_first_job_apply', title: '🧾 İlk İş Başvurusu', description: 'Eğitimden sonra ilk işi kabul et', location: 'Cafe / Ofis', reward: 120, type: 'career' },
             { id: 'career_first_income', title: '💰 İlk Kazanç', description: 'İlk kariyer gelirini kazan', location: 'Kasaba', reward: 150, type: 'career' },
@@ -99,6 +101,48 @@ class QuestManager {
         return saved ? JSON.parse(saved) : [];
     }
 
+    loadPlayerStats() {
+        const saved = localStorage.getItem('playerStats');
+        return saved ? JSON.parse(saved) : {
+            intelligence: 1,
+            strength: 1,
+            talent: 1,
+            money: 0,
+            energy: 100,
+            maxEnergy: 100,
+            actionPoints: 10,
+            maxActionPoints: 10,
+            upgrades: { school: 0, workshop: 0, office: 0, cafe: 0 }
+        };
+    }
+
+    getUpgradeCost(type) {
+        const level = this.playerStats.upgrades?.[type] || 0;
+        return 100 + (level * 150);
+    }
+
+    purchaseUpgrade(type) {
+        if (!this.playerStats.upgrades || this.playerStats.upgrades[type] === undefined) {
+            return { ok: false, message: 'Geçersiz geliştirme türü.' };
+        }
+
+        const cost = this.getUpgradeCost(type);
+        if (this.playerStats.money < cost) {
+            return { ok: false, message: `Yetersiz para. Gerekli: ${cost} ₺` };
+        }
+
+        this.playerStats.money -= cost;
+        this.playerStats.upgrades[type] += 1;
+
+        if (type === 'school') this.playerStats.intelligence += 1;
+        if (type === 'workshop') this.playerStats.strength += 1;
+        if (type === 'office') this.playerStats.talent += 1;
+        if (type === 'cafe') this.playerStats.maxActionPoints += 1;
+
+        this.saveProgress();
+        return { ok: true, message: `${type} geliştirmesi alındı!` };
+    }
+
     saveProgress() {
         localStorage.setItem('activeQuests', JSON.stringify(this.activeQuests));
         localStorage.setItem('completedQuests', JSON.stringify(this.completedQuests));
@@ -108,6 +152,7 @@ class QuestManager {
         localStorage.setItem('careerSchoolSubjects', JSON.stringify(this.schoolSubjects));
         localStorage.setItem('careerCompletedLessons', JSON.stringify(this.completedLessonIds));
         localStorage.setItem('careerState', JSON.stringify(this.careerState));
+        localStorage.setItem('playerStats', JSON.stringify(this.playerStats));
     }
 
     createQuestUI() {
@@ -241,10 +286,11 @@ class QuestManager {
             }
 
             const nameLower = locationName.toLowerCase();
-            if (nameLower.includes('okul')) {
-                this.completeQuest('career_go_to_school');
-                this.activateQuest('career_pass_core_lessons');
-            }
+            if (nameLower.includes('okul')) this.activateQuest('career_pass_core_lessons');
+            if (nameLower.includes('cafe')) this.activateQuest('career_first_job_apply');
+            if (nameLower.includes('ofis')) this.activateQuest('office_first_presentation');
+            if (nameLower.includes('atölye') || nameLower.includes('atolye')) this.activateQuest('workshop_first_vehicle');
+            if (this.visitedLocations.length >= 1) this.completeQuest('career_go_to_school');
         }
     }
 
@@ -263,6 +309,10 @@ class QuestManager {
             this.completeQuest('career_pass_core_lessons');
             this.activateQuest('career_first_job_apply');
         }
+
+        this.consumeAction(1);
+        this.playerStats.intelligence += 1 + (this.playerStats.upgrades?.school || 0);
+        this.saveProgress();
     }
 
     trackJobApplication() {
@@ -271,6 +321,7 @@ class QuestManager {
             this.saveProgress();
             this.completeQuest('career_first_job_apply');
             this.activateQuest('career_first_income');
+            this.consumeAction(1);
         }
     }
 
@@ -280,7 +331,51 @@ class QuestManager {
             this.saveProgress();
             this.completeQuest('career_first_income');
             this.activateQuest('career_end_day_1');
+            this.playerStats.money += amount;
+            this.playerStats.money += ((this.playerStats.upgrades?.cafe || 0) * 10);
+            this.consumeAction(1);
+            this.saveProgress();
         }
+    }
+
+    endDayAtHome() {
+        this.completeQuest('career_end_day_1');
+        this.careerState.day += 1;
+        this.careerState.hour = 8;
+        this.saveProgress();
+        if (this.careerState.day >= 2) this.completeQuest('career_day_2_continue');
+        this.playerStats.energy = this.playerStats.maxEnergy;
+        this.playerStats.actionPoints = this.playerStats.maxActionPoints;
+        this.saveProgress();
+    }
+
+    advanceGameTime(hours = 1) {
+        this.careerState.hour = (this.careerState.hour || 8) + hours;
+        if (this.careerState.hour > 23) this.careerState.hour = 23;
+        this.saveProgress();
+        return this.careerState.hour;
+    }
+
+    consumeAction(points = 1) {
+        this.playerStats.actionPoints = Math.max(0, this.playerStats.actionPoints - points);
+        this.playerStats.energy = Math.max(0, this.playerStats.energy - (points * 8));
+        this.saveProgress();
+    }
+
+    gainWorkshopProgress() {
+        this.playerStats.strength += 1 + (this.playerStats.upgrades?.workshop || 0);
+        this.consumeAction(1);
+        this.saveProgress();
+    }
+
+    gainOfficeProgress() {
+        this.playerStats.talent += 1 + (this.playerStats.upgrades?.office || 0);
+        this.consumeAction(1);
+        this.saveProgress();
+    }
+
+    getEducationProgress() {
+        return `${Math.min(this.completedLessonIds.length, 5)}/5`;
     }
 
     endDayAtHome() {
