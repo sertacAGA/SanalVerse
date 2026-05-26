@@ -56,21 +56,15 @@ function renderProfile() {
 }
 
 function endDay() {
-    const careerStateBefore = JSON.parse(localStorage.getItem('careerState') || '{"day":1,"hour":8}');
-    const stats = JSON.parse(localStorage.getItem('playerStats') || '{"actionPoints":10}');
-    const hasNoActions = (stats.actionPoints || 0) <= 0;
-
-    if (!hasNoActions && (careerStateBefore.hour || 8) < 21) {
-        alert(`Henüz erken! Saat ${String(careerStateBefore.hour || 8).padStart(2, '0')}:00, uyku vakti 21:00.`);
-        return;
-    }
-
-    if (window.questManager) {
-        window.questManager.endDayAtHome();
-    }
-
-    const careerState = JSON.parse(localStorage.getItem('careerState') || '{"day":1}');
-    alert(`Gün tamamlandı. Yeni gün: ${careerState.day || 1}`);
+    if (!confirm('Günü bitirmek istediğine emin misin?')) return;
+    const stats = JSON.parse(localStorage.getItem('playerStats') || '{"money":0}');
+    const before = JSON.parse(localStorage.getItem('careerState') || '{"day":1,"hour":8}');
+    if (window.questManager) window.questManager.endDayAtHome();
+    const after = JSON.parse(localStorage.getItem('careerState') || '{"day":1}');
+    const log = JSON.parse(localStorage.getItem('dayLogs') || '[]');
+    log.push({ day: before.day, earnedMoney: stats.money || 0, endHour: before.hour || 8, nextDay: after.day });
+    localStorage.setItem('dayLogs', JSON.stringify(log.slice(-20)));
+    alert(`Gün tamamlandı. Gün ${before.day} kaydedildi. Yeni gün: ${after.day || 1}`);
 }
 
 function renderUpgradeInfo() {

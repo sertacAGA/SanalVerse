@@ -1,3 +1,14 @@
+
+const assistantQuestions = [
+ {q:'Sunumunda hangi metriği vurgulamak istersin?',opts:['Maliyet','Hız','Kullanıcı Etkisi','Sürdürülebilirlik']},
+ {q:'Hangi görsel türü eklensin?',opts:['Ürün renderı','Kullanıcı akışı','Teknik şema','Pazar grafiği']}
+];
+let selectedAssistantAnswers = [];
+function renderAssistant() {
+ const box=document.getElementById('assistant-quiz'); if(!box) return;
+ box.innerHTML = assistantQuestions.map((item,i)=>`<div style='margin:8px 0'><strong>${item.q}</strong><div>${item.opts.map(opt=>`<button class='btn secondary' style='min-width:unset;padding:6px 10px;margin:4px' onclick="pickAssistant(${i},'${opt}')">${opt}</button>`).join('')}</div></div>`).join('');
+}
+function pickAssistant(i,opt){selectedAssistantAnswers[i]=opt; alert(`Seçildi: ${opt}`);} 
 let playerName = localStorage.getItem('playerName') || "Oyuncu";
 let playerRole = localStorage.getItem('playerRole') || "Yetişkin";
 let currentSlide = 0;
@@ -5,7 +16,7 @@ let presentationData = [];
 
 window.onload = () => {
     const welcomeText = document.getElementById('office-welcome');
-    if(welcomeText) welcomeText.innerText = `Hoş geldin ${playerName}, projen sunuma hazır mı?`;
+    if(welcomeText) welcomeText.innerText = `Hoş geldin ${playerName}, projen sunuma hazır mı?`; renderAssistant();
 };
 
 function goBackToMap() { window.location.href = '../index.html#scene-map'; }
@@ -21,7 +32,7 @@ function startPresentation() {
         `Projemizin teknik odak noktası tamamen "${tech}" üzerine kurulu.`,
         `Bu sayede kasabamızdaki "${need}" sorununa kökten bir çözüm sunuyoruz.`,
         `Görsel dilimizde "${style}" tarzını seçerek fark yaratmayı hedefledik.`,
-        `Sunumumu dinlediğiniz için teşekkürler. Kararınızı bekliyorum!`
+        `Sunumumu dinlediğiniz için teşekkürler. Kararınızı bekliyorum!`, ...selectedAssistantAnswers.filter(Boolean).map((a,i)=>`Asistan Önerisi ${i+1}: ${a}`)
     ];
 
     document.getElementById('office-preparation').classList.remove('active');
