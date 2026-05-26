@@ -1,28 +1,31 @@
 // ---------------- STATE ----------------
-let gameState = {
-    step: "category",
-    category: null,
-    vehicle: null,
-    parts: []
-};
+let gameState = { step: 'category', category: null, vehicle: null, parts: [] };
+const careerPath = localStorage.getItem('careerPath') || 'Mühendis';
 
 // ---------------- DATA ----------------
-const productionLines = [
+const productionLinesBase = [
     { id: "air", name: "Hava Araçları", icon: "🚁", desc: "Drone ve İHA üretimi" },
     { id: "robot", name: "Robotik Sistemler", icon: "🤖", desc: "Taşıma ve savunma robotları" },
     { id: "land", name: "Kara Araçları", icon: "🏎️", desc: "Otonom araç projeleri" }
 ];
 
-const vehicles = {
-    air: [
-        { id: "drone_fast", name: "Hızlı Drone", desc: "Keşif odaklı, yüksek hız." },
-        { id: "drone_power", name: "Saldırı Drone", desc: "Ağır yük kapasiteli." }
-    ],
-    robot: [
-        { id: "bot_walker", name: "Örümcek Bot", desc: "Her türlü araziye uygun." },
-        { id: "bot_arm", name: "Endüstriyel Kol", desc: "Hassas montaj işleri." }
-    ]
+const vehiclesByCareer = {
+    'Mühendis': {
+        air:[{id:'drone_fast',name:'Hızlı Drone',desc:'Keşif odaklı, yüksek hız.'}],
+        robot:[{id:'bot_arm',name:'Endüstriyel Kol',desc:'Hassas montaj işleri.'}]
+    },
+    'Tasarımcı': {
+        robot:[{id:'display_bot',name:'Vitrin Robotu',desc:'Sunum ve sergi odaklı.'}],
+        land:[{id:'city_kiosk',name:'Akıllı Kiosk',desc:'Şehir estetiği + kullanım.'}]
+    },
+    'Yazılımcı': {
+        air:[{id:'code_drone',name:'Kodlama Drone',desc:'Yazılım test uçuşu.'}],
+        land:[{id:'iot_car',name:'IoT Araç',desc:'Otonom kontrol modüllü.'}]
+    }
 };
+
+const productionLines = productionLinesBase;
+const vehicles = vehiclesByCareer[careerPath] || vehiclesByCareer['Mühendis'];
 
 const parts = [
     { id: "engine", name: "Titanyum Motor", desc: "Hızı +30 artırır", speed: 30 },
@@ -131,10 +134,13 @@ function renderBuild() {
 }
 
 function addPart(id) {
+    const stats = JSON.parse(localStorage.getItem('playerStats') || '{"money":0}');
     const part = parts.find(p => p.id === id);
-    if (gameState.parts.some(p => p.id === id)) {
-        return;
-    }
+    if (gameState.parts.some(p => p.id === id)) return;
+    const cost = 40;
+    if ((stats.money || 0) < cost) { alert('Parça için yeterli paran yok.'); return; }
+    stats.money -= cost;
+    localStorage.setItem('playerStats', JSON.stringify(stats));
     gameState.parts.push(part);
     renderBuild();
 }

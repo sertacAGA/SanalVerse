@@ -457,3 +457,21 @@ style.textContent = `
 document.head.appendChild(style);
 
 window.questManager = new QuestManager();
+
+// ---- V6 Career extensions ----
+QuestManager.prototype.setCareerPath = function(path) {
+    this.careerPath = path;
+    localStorage.setItem('careerPath', path);
+};
+
+QuestManager.prototype.generateTownNeeds = function() {
+    const path = localStorage.getItem('careerPath') || 'Mühendis';
+    const pool = {
+        'Mühendis': ['Drone Tamiri', 'Enerji Modülü Kurulumu', 'Akıllı Ulaşım Prototipi'],
+        'Tasarımcı': ['Festival Afişi', 'Ürün Ambalaj Tasarımı', 'Arayüz Maketi'],
+        'Yazılımcı': ['Stok Takip Uygulaması', 'Kafe Sipariş Botu', 'Ofis Sunum Asistanı']
+    };
+    const needs = (pool[path] || pool['Mühendis']).map((name, i) => ({ id: `need_${Date.now()}_${i}`, name, career: path, reward: 80 + (i*60), status: 'open' }));
+    localStorage.setItem('townNeeds', JSON.stringify(needs));
+    return needs;
+};
