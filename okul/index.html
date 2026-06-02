@@ -6,6 +6,7 @@
     <title>Sanal Okul V2.5</title>
     
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- icerik.js FIRST - kariyer müfredatını tanımla -->
     <script src="icerik.js"></script>
 
     <style>
@@ -157,6 +158,7 @@
                     <div style="text-align:center; margin-top:80px; color:#95a5a6;">
                         <div style="font-size: 4em; margin-bottom: 10px;">🎓</div>
                         <h3>Sanal Sınıfına Hoş Geldin!</h3>
+                        <p id="career-display">Kariyer: Seçilmedi</p>
                         <p>Lütfen soldaki menüden öğrenmek istediğin dersi seç.</p>
                     </div>
                 </div>
@@ -189,17 +191,28 @@ function getSubjectByLessonId(lessonId) {
 // Puanı ekranda güncelle
 document.getElementById('score-display').innerText = userScore + " Puan";
 
+// Kariyer göster
+const career = localStorage.getItem('careerPath') || 'Seçilmedi';
+document.getElementById('career-display').innerText = `Kariyer: ${career}`;
+
 function buildMenu() {
     menuContainer.innerHTML = ""; // Menüyü temizle
     
+    console.log("buildMenu called. curriculumData length:", curriculumData.length);
+    
+    if (!curriculumData || curriculumData.length === 0) {
+        menuContainer.innerHTML = "<p style='color: white; padding: 20px;'>❌ Ders yüklenemiyor. Sayfayı yenile.</p>";
+        return;
+    }
+    
     curriculumData.forEach(item => {
-        // Ana Ders Başlığı (Matematik, Edebiyat vb.)
+        // Ana Ders Başlığı
         const subjectBtn = document.createElement('button');
         subjectBtn.className = 'main-subject';
         subjectBtn.innerText = "📘 " + item.subject;
         menuContainer.appendChild(subjectBtn);
 
-        // Alt Konular (Geometri, Üslü Sayılar vb.)
+        // Alt Konular
         item.lessons.forEach(lesson => {
             const topicBtn = document.createElement('button');
             topicBtn.className = 'sub-topic';
@@ -308,9 +321,19 @@ function finishLesson() {
     location.reload(); // Veya haritaya dön
 }
 
-// Uygulamayı başlat
-buildMenu();
+// ÖNEMLİ: Sayfa yüklendikten sonra buildMenu() çağır
+window.addEventListener('DOMContentLoaded', function() {
+    console.log("DOMContentLoaded fired");
+    buildMenu();
+});
+
+// Eğer DOMContentLoaded çok geç kalırsa, hemen çağır
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => buildMenu());
+} else {
+    buildMenu();
+}
     </script>
-<script src="../quest-system.js"></script>
+    <script src="../quest-system.js"></script>
 </body>
 </html>
