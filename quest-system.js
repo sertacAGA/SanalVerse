@@ -15,6 +15,7 @@ class QuestManager {
         this.completedLessonIds = this.loadCompletedLessonIds();
         this.careerState = this.loadCareerState();
         this.playerStats = this.loadPlayerStats();
+        this.careerPath = localStorage.getItem('careerPath') || 'Robotik Tasarımcı';
         this.init();
     }
 
@@ -43,10 +44,10 @@ class QuestManager {
             // ATÖLYE
             { id: 'workshop_first_vehicle', title: '🚁 İlk Aracını Üret', description: 'Atölyede herhangi bir araç üret', location: 'Atölye', reward: 150, type: 'production' },
             { id: 'workshop_test_success', title: '✅ Başarılı Test', description: 'Test sürüşünde 300+ puan al', location: 'Atölye', reward: 300, type: 'production' },
-            { id: 'workshop_all_categories', title: '🏆 Tüm Kategoriler', description: 'Hava, Kara ve Robot kategorilerinden üretim yap', location: 'Atölye', reward: 600, type: 'production' },
+            { id: 'workshop_all_categories', title: '🏆 Tüm Kategoriler', description: 'Hava, Kara ve Robot kategorilerinden üretim yap', location: 'Atölye', reward: 600, type: 'production' }
             
             // OFİS
-            { id: 'office_first_presentation', title: '💼 İlk Sunumun', description: 'Ofiste bir proje sunumu yap', location: 'Ofis', reward: 100, type: 'presentation' },
+            , { id: 'office_first_presentation', title: '💼 İlk Sunumun', description: 'Ofiste bir proje sunumu yap', location: 'Ofis', reward: 100, type: 'presentation' },
             { id: 'office_high_score', title: '⭐ Mükemmel Sunum', description: 'Sunumdan 85+ puan al', location: 'Ofis', reward: 250, type: 'presentation' },
             
             // EV
@@ -161,7 +162,7 @@ class QuestManager {
         const panel = document.createElement('div');
         panel.id = 'quest-panel';
         panel.style.cssText = `
-            position: fixed; top: 80px; right: 20px; width: 350px; max-height: 500px;
+            position: fixed; top: 80px; right: 20px; width: 300px; max-height: 400px;
             background: rgba(0,0,0,0.9); border: 3px solid #22c55e; border-radius: 15px;
             padding: 20px; color: white; z-index: 9000; overflow-y: auto;
             font-family: 'Segoe UI', sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -187,7 +188,7 @@ class QuestManager {
             if (list.style.display === 'none') {
                 list.style.display = 'block';
                 btn.textContent = '−';
-                panel.style.maxHeight = '500px';
+                panel.style.maxHeight = '400px';
             } else {
                 list.style.display = 'none';
                 btn.textContent = '+';
@@ -378,20 +379,6 @@ class QuestManager {
         return `${Math.min(this.completedLessonIds.length, 5)}/5`;
     }
 
-    endDayAtHome() {
-        this.completeQuest('career_end_day_1');
-        this.careerState.day += 1;
-        this.careerState.hour = 8;
-        this.saveProgress();
-        if (this.careerState.day >= 2) this.completeQuest('career_day_2_continue');
-    }
-
-    advanceGameTime(hours = 1) {
-        this.careerState.hour = (this.careerState.hour || 8) + hours;
-        this.saveProgress();
-        return this.careerState.hour;
-    }
-
     trackProduction(category) {
         if (!this.productionCategories.includes(category)) {
             this.productionCategories.push(category);
@@ -464,14 +451,93 @@ QuestManager.prototype.setCareerPath = function(path) {
     localStorage.setItem('careerPath', path);
 };
 
+// YENİ: Kariyer tabanlı görev ve dersler
 QuestManager.prototype.generateTownNeeds = function() {
-    const path = localStorage.getItem('careerPath') || 'Mühendis';
+    const path = localStorage.getItem('careerPath') || 'Robotik Tasarımcı';
     const pool = {
+        'Robotik Tasarımcı': ['Robot Kolunun Tasarımı', 'Sensör Entegrasyonu', 'Otonom Hareket Prototipi'],
+        'Yapay Zeka Uzmanı': ['Veri Analizi Modülü', 'Makine Öğrenmesi Algoritması', 'Sinir Ağı Eğitimi'],
+        'Uzay Mühendisi': ['Roket Motoru Tasarımı', 'Yörünge Hesaplaması', 'Uydu İletişim Sistemi'],
         'Mühendis': ['Drone Tamiri', 'Enerji Modülü Kurulumu', 'Akıllı Ulaşım Prototipi'],
         'Tasarımcı': ['Festival Afişi', 'Ürün Ambalaj Tasarımı', 'Arayüz Maketi'],
         'Yazılımcı': ['Stok Takip Uygulaması', 'Kafe Sipariş Botu', 'Ofis Sunum Asistanı']
     };
-    const needs = (pool[path] || pool['Mühendis']).map((name, i) => ({ id: `need_${Date.now()}_${i}`, name, career: path, reward: 80 + (i*60), status: 'open' }));
+    const needs = (pool[path] || pool['Robotik Tasarımcı']).map((name, i) => ({ id: `need_${Date.now()}_${i}`, name, career: path, reward: 80 + (i*60), status: 'open' }));
     localStorage.setItem('townNeeds', JSON.stringify(needs));
     return needs;
+};
+
+// YENİ: Kariyer tabanlı dersler
+QuestManager.prototype.getCareerLessons = function() {
+    const path = localStorage.getItem('careerPath') || 'Robotik Tasarımcı';
+    const lessons = {
+        'Robotik Tasarımcı': [
+            { id: 1, name: 'Mekatronik Tasarımı', icon: '⚙️', description: 'Mekanik ve elektrik sistemlerin entegrasyonu' },
+            { id: 2, name: 'Elektronik Devreleri', icon: '🔌', description: 'Temel elektronik bileşenler ve uygulamalar' },
+            { id: 3, name: 'Makine Tasarımı', icon: '🔩', description: 'Mekanik parçaların tasarım ilkeleri' },
+            { id: 4, name: 'Kontrol Sistemleri', icon: '🎮', description: 'Otomasyona giriş' },
+            { id: 5, name: 'Prototip Yapımı', icon: '🛠️', description: 'Prototype tasarımı ve uygulaması' }
+        ],
+        'Yapay Zeka Uzmanı': [
+            { id: 1, name: 'Lineer Cebir ve Matematik', icon: '📐', description: 'AI için temel matematiksel kavramlar' },
+            { id: 2, name: 'Veri Analizi', icon: '📊', description: 'Veri işleme ve analiz teknikleri' },
+            { id: 3, name: 'Makine Öğrenmesi', icon: '🤖', description: 'ML algoritmaları ve uygulamaları' },
+            { id: 4, name: 'Derin Öğrenme', icon: '🧠', description: 'Sinir ağlarına giriş' },
+            { id: 5, name: 'Python ile AI', icon: '🐍', description: 'AI projelerini Python ile kodlama' }
+        ],
+        'Uzay Mühendisi': [
+            { id: 1, name: 'Klasik Mekanik', icon: '🌍', description: 'Hareket ve kuvvetler teorisi' },
+            { id: 2, name: 'Astrofizik', icon: '⭐', description: 'Yıldızlar, galaksiler ve evren' },
+            { id: 3, name: 'Aerodinamik', icon: '✈️', description: 'Hava akımı ve dinamiği' },
+            { id: 4, name: 'Yörünge Mekaniği', icon: '🪐', description: 'Uydu ve gezegen hareketleri' },
+            { id: 5, name: 'Uzay Araştırmaları', icon: '🛸', description: 'Uzay misyonları ve teknolojisi' }
+        ]
+    };
+    return lessons[path] || lessons['Robotik Tasarımcı'];
+};
+
+// YENİ: Kariyer tabanlı workshop kategorileri
+QuestManager.prototype.getCareerWorkshopCategories = function() {
+    const path = localStorage.getItem('careerPath') || 'Robotik Tasarımcı';
+    const categories = {
+        'Robotik Tasarımcı': [
+            { name: 'Robot', icon: '🤖', description: 'Robot ve mekanik sistemler' },
+            { name: 'Drone', icon: '🚁', description: 'Hava araçları ve drone teknolojisi' },
+            { name: 'Araç', icon: '🚗', description: 'Kara taşıtları' }
+        ],
+        'Yapay Zeka Uzmanı': [
+            { name: 'Veri Analiz', icon: '📊', description: 'Veri işleme ve analiz' },
+            { name: 'Tahmin Modeli', icon: '🔮', description: 'Makine öğrenmesi modelleri' },
+            { name: 'Görsel AI', icon: '📷', description: 'Görüntü tanıma ve işleme' }
+        ],
+        'Uzay Mühendisi': [
+            { name: 'Roket', icon: '🚀', description: 'Roket ve uydu teknolojisi' },
+            { name: 'Teleskop', icon: '🔭', description: 'Gözlem araçları' },
+            { name: 'İletişim', icon: '📡', description: 'Uzay iletişim sistemleri' }
+        ]
+    };
+    return categories[path] || categories['Robotik Tasarımcı'];
+};
+
+// YENİ: Kariyer tabanlı ofis sunuları
+QuestManager.prototype.getCareerPresentations = function() {
+    const path = localStorage.getItem('careerPath') || 'Robotik Tasarımcı';
+    const presentations = {
+        'Robotik Tasarımcı': [
+            { id: 1, title: 'Robot Tasarım Sunumu', duration: '10 min', difficulty: 'Orta' },
+            { id: 2, title: 'Prototip Geliştirme Raporu', duration: '15 min', difficulty: 'Zor' },
+            { id: 3, title: 'Teknik Spesifikasyonlar', duration: '8 min', difficulty: 'Kolay' }
+        ],
+        'Yapay Zeka Uzmanı': [
+            { id: 1, title: 'Model Sonuçlarının Analizi', duration: '12 min', difficulty: 'Orta' },
+            { id: 2, title: 'Veri İçgörüleri Sunumu', duration: '15 min', difficulty: 'Zor' },
+            { id: 3, title: 'AI Etik Tartışması', duration: '10 min', difficulty: 'Orta' }
+        ],
+        'Uzay Mühendisi': [
+            { id: 1, title: 'Roket Tasarımı Sunumu', duration: '12 min', difficulty: 'Zor' },
+            { id: 2, title: 'Uzay Misyonu Planlaması', duration: '15 min', difficulty: 'Zor' },
+            { id: 3, title: 'Yörünge Mekaniği Temel Bilgileri', duration: '10 min', difficulty: 'Orta' }
+        ]
+    };
+    return presentations[path] || presentations['Robotik Tasarımcı'];
 };
