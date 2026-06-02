@@ -27,7 +27,7 @@ window.onload = function() {
 };
 
 function goToScene(sceneId) { document.querySelectorAll('.scene').forEach(scene => scene.classList.remove('active')); document.getElementById(sceneId).classList.add('active'); }
-function toggleSettings() { const modal = document.getElementById('settings-modal'); modal.classList.toggle('open'); if (modal.classList.contains('open') && window.questManager) window.questManager.completeQuest('home_check_profile'); }
+function toggleSettings() { const modal = document.getElementById('settings-modal'); modal.classList.toggle('open'); if (modal.classList.contains('open') && window.questManager) window.questManager; }
 function resetGame() { localStorage.clear(); location.reload(); }
 function quitGame() { localStorage.setItem('isLoggedIn', 'true'); alert('Oyun kaydedildi.'); window.location.href = 'about:blank'; }
 
@@ -51,7 +51,8 @@ function renderGlobalAvatarCard() {
     card.innerHTML = `<div><strong>${playerData.username || 'Oyuncu'}</strong></div><div>${document.getElementById('avatar-visual')?.innerText || '👨'} ${playerData.careerPath || 'Kariyer seçilmedi'}</div><div>💰 ${stats.money || 0} ₺</div>`;
 }
 
-setInterval(() => { if (!window.questManager) return; window.questManager.advanceGameTime(1); updateHudTime(); updateHudStats(); renderGlobalAvatarCard(); }, 5000);
+// ÖNEMLİ: Saat ilerleme hızını artırdık (5 saniyede → 1 saniyede +1 saat)
+setInterval(() => { if (!window.questManager) return; window.questManager.advanceGameTime(1); updateHudTime(); updateHudStats(); renderGlobalAvatarCard(); }, 1000);
 
 function validateAndGo(nextSceneId) {
     const nameInput = document.getElementById('username');
@@ -69,6 +70,12 @@ function validateAndGo(nextSceneId) {
 }
 
 function saveCareerPath(path) {
+    // ÖNEMLİ: Kariyer seçimi validation
+    if (!path || path.trim() === '') {
+        alert("Lütfen bir kariyer seçiniz!");
+        return false;
+    }
+    
     playerData.careerPath = path;
     localStorage.setItem('careerPath', path);
     if (window.questManager) {
@@ -77,6 +84,8 @@ function saveCareerPath(path) {
     }
     alert(`Kariyer yolun seçildi: ${path}`);
     renderGlobalAvatarCard();
+    goToScene('scene-menu');
+    return true;
 }
 
 function selectGender(gender, btn) { playerData.gender = gender; document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('selected')); btn.classList.add('selected'); updateAvatarVisual(); }
